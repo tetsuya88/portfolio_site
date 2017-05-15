@@ -1,0 +1,1270 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height:  100%;
+}
+
+body{
+    text-align: center;
+    background-color:#ffffff;
+    font-family:Avenir , "Open Sans" , "游ゴシック","Helvetica Neue" , Helvetica , Arial , Verdana , Roboto  , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+    margin: 0;
+    width:100vw;
+    height: 100%;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing:2px;
+    margin-top: 0px;
+}
+
+
+.header{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    top: 90vh;
+    color: #5C6A70;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center; 
+    background-color: white;
+}
+
+#header-large hr{
+    border-width: 1px 0 0 0;
+}
+
+#wrapper{
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling:touch;
+}
+
+
+#firstview{
+    position: relative;
+    float: left;
+    width: 100%;
+    height:90vh;
+    background-image:url(img/firstview-bg.png);
+    background-color: #F5EA57;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat-y;
+    display: flex;
+    align-items: center;
+    color: #333B3F;
+}
+
+.firstview-title{
+    position: relative;
+    width: 800px;
+    height: 270px;
+    text-align: left;
+    margin: 0 auto;
+    z-index: 50;
+}
+
+#firstview h1{
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 58px;
+    letter-spacing:5px;
+}
+
+.h1-sub{
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing:7px;
+    line-height: 48px;
+    float: left;
+    clear: left;
+}
+
+.h1-date{
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing:7px;
+    float: left;
+    clear: left;
+    margin-top: 7px;
+    margin-left: 2px;
+}
+
+.h1-eng{
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing:3px;
+    float: left;
+    clear: left;
+    margin-left: 5px;
+}
+
+#firstview-togediv{
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    left:0px;
+    bottom: 0px;
+    margin-bottom: -5px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+}
+        
+.header_content{
+    width: 133px;
+    text-align: center;
+}
+        
+.header a{
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: 20px;
+    color: #5C6A70;
+}
+
+
+#greeting{
+    position: relative;
+    float: left;
+    background:#ffffff;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-content: center;
+    z-index: 15000;
+}
+
+#greeting-content{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    background:#ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    color: #5C6a70;
+    text-align: center;
+}
+
+#greeting-message h1{
+    font-size: 15pt;
+    letter-spacing: 1px;
+    margin: 13px;
+}
+
+#greeting-message{
+    margin: 17.5%;
+    max-width: 800px;
+    min-width: 300px;
+    width: 65vw;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#snsIcons{
+    margin: 0 auto;
+    width: 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    
+}
+
+#snsIcons img{
+    width:70px; 
+    margin:10px;
+}
+
+#concept{
+    position: relative;
+    float: left;
+    width: 100%;
+    height:90vh;
+    background-color: #F5EA57;
+    text-align: center;
+    display: block;
+    color: #2C3C42;
+}
+
+#concept h1{
+    color: #5C6A70;
+}
+
+#concept-togediv{
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+}
+
+#concept-title-hr{
+    width: 170px;
+    margin: 0 auto;
+    border-width: 1px 0 0 0;
+    
+}
+#concept-center{
+    float: left;
+    width: 100%;
+    height:  60vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.concept-concept{
+    margin: 0 auto;
+    max-width: 800px;
+    padding-left: 20px;
+    width: auto;
+    text-align: left;
+    display: block;
+    border-left: 2px solid #2C3C42;
+}
+
+.concept-concept hr{
+    width: 400px;
+    border-width: 1px 0 0 0;
+    margin-top: -10px;
+    display: none;
+}
+
+.concept-piece{
+    font-family: "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing:5px;
+}
+
+.concept-piece-ja{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing:5px;
+}
+
+.concept-concept p{
+    font-weight:100;
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 29px;
+    letter-spacing:1px;
+}
+
+#information{
+    position: relative;
+    float: left;
+    width: 100%;
+    height:auto;
+    min-height: 90vh;
+    background-color: #F5EA57;
+    overflow: hidden;
+    text-align: center;
+    color: #2C3C42;
+}
+
+#information h1{
+    margin-top: 80px;
+    color: #5C6A70;
+}
+
+#information hr{
+    width: 260px;
+    margin: 0 auto;
+    border-width: 1px 0 0 0;
+}
+    
+#informationbox{
+    width: 80vw;
+    height: auto;
+    min-height: 49vh;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 120px;
+    background-color: white;
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+    
+#information-informations{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+#information-informations hr{
+    border: 1px solid #898989;
+}
+
+#maplink-btn{
+    width: 172px;
+    height: 36px;
+    background-image: url(img/go-to-map.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 60px;
+    margin-bottom: 34px;
+    
+}
+
+#maplink-btn:hover { 
+    margin-top: 55px;
+    margin-bottom: 39px;
+}
+
+
+#informationbox-left{
+    min-width: 300px;
+    max-width: 45%;
+    height: auto;
+    margin-top: 30px;
+    padding-left: 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#informationbox-left hr{
+    float: left;
+    margin-left: 0px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+#informationbox-right{
+    font-size: 14px;
+    min-width: 300px;
+    max-width: 45%;
+    height: auto;
+    margin-top: 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+#informationbox-right dd{
+    padding-left:1em;
+    font-size: 14px;
+}
+#informationbox-right dt{
+    margin-top: 7px;
+    font-size: 17px;
+}
+
+
+.info-div-1{
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 32px;
+    clear: left;
+}
+
+.info-div-2{
+    font-family: "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+    float: left;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 17px;
+    clear: left;
+}
+
+#info-togediv{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+    display: flex;
+    justify-content: center;
+}
+
+#blog{
+    float:left;
+    width:100%;
+    height: 300px;
+    padding-bottom: 50px;
+}
+
+#blog h1{
+    margin-top: 80px;
+    color: #5C6A70;
+}
+
+#blog hr{
+    width: 6em;
+    margin: 0 auto;
+    border-width: 1px 0 0 0;
+}
+
+#blog-link{
+    width:313px;
+    height: 65px;
+    margin: 0 auto;
+    margin-top:100px;
+    background-image: url(img/blog-jump-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+#blog-link:hover{
+    margin-top: 95px;
+}
+
+
+
+#other-exhibition{
+    float: left;
+    width:100%;
+    min-height: 90vh;
+    color: #2C3C42;
+}
+
+#other-exhibition h1{
+    margin-top: 40px;
+    color: #5C6A70;
+}
+
+
+#other-exhibition hr{
+    width: 10em;
+    margin: 0 auto;
+    border-width: 1px 0 0 0;
+}
+
+#exhibition-exhibitions{
+    width:100%;
+    display: flex;
+    margin-top: 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.exhibitionbox{
+    width: 350px;
+    min-width: 300px;
+    height: 400px;
+    border: 1px solid #AEAEAF;
+    border-bottom: 2px solid #5C6A70;
+    margin: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 28px;
+    display: block;
+}
+.other-exhibitions{
+    margin: 20px;
+}
+
+.exhibitionbox span{
+    float: left;
+    color: #5C6A70;
+}
+
+.exhibitionbox dl{
+    float: left;
+    margin: 5%;
+    margin-top:10%;
+    margin-left: 10%;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height:25px;
+    clear: right;
+    text-align: left;
+    color: #5C6A70;
+}
+    
+.exhibitionbox dd{
+    padding-left: 1em;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+    
+#exhibitors{
+    float: left;
+    width: 100%;
+    height:auto;
+    min-height: 90vh;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+    color: #2C3C42;
+}
+
+#exhibitors h1{
+    margin-top: 80px;
+    color: #5C6A70;
+}
+
+#exhibitors hr{
+    width: 260px;
+    margin: 0 auto;
+    border-width: 1px 0 0 0;
+}    
+
+#exhibitors-info{
+    max-width: 530px;
+    min-width: 360px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 1px solid lightgray;
+    text-align: center;
+}
+
+#exhibitors-info img{
+    margin-top: 10px;
+    width: 10%;
+}
+
+#exhibitors-info h3{
+    font-size: 15px;
+}
+
+#exhibitors-info h4{
+    font-size: 15px;
+    margin-top: 18px;
+    margin-bottom: 5px;
+}
+
+#masters{
+    width: 270px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+#masters span{
+    width: 130px;
+}
+
+
+#bachelors{
+    width: 270px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+#bachelors span{
+    width: 130px;
+}
+
+#readmore-button {
+    margin-bottom: 3%;
+}
+#readmore-button a{
+    color: #5c6a70;
+}
+
+#lavo{
+    max-width: 75vw;
+    min-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+
+#lavo-product{
+    min-width: 350px;
+    max-width: 48%;
+    height: auto;
+    padding-bottom: 8px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    border-left: 5px solid #76B9B7;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+    justify-content: center;
+}
+
+#lavo-media{
+    min-width: 350px;
+    max-width: 48%;
+    height: auto;
+    padding-bottom: 8px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    border-left: 5px solid #F5EA57;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+    justify-content: center;
+}
+
+.lavolatories{
+    min-width: 220px;
+    max-width: 300px;
+    font-size: 12px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    
+}
+
+#lavo-product .lavolatories:hover {
+    min-width: 220px;
+    max-width: 300px;
+    font-size: 12px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #76B9B7;
+    box-shadow:1px 0 1px 1px #76B9B7 inset;
+}
+
+#lavo-media .lavolatories:hover {
+    min-width: 220px;
+    max-width: 300px;
+    font-size: 12px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F5EA57;
+    box-shadow:1px 0 1px 1px #F5EA57 inset;
+}
+
+#lavo-media .lavolatories{
+    background-image: url(img/lavo-media-bg.png);
+    background-position: right;
+}
+
+#lavo-product .lavolatories{
+    background-image: url(img/lavo-product-bg.png);
+    background-position: right;
+}
+
+.togetoges{
+    width: 100%;
+    height: 10.2%;
+    min-width: 970px;
+}
+    
+#footer{
+    width:100%;
+    height: 40px;
+    padding-top: 20px;
+    float:left;
+    text-align: right;
+    background-color: #f5ea57;
+    font-size: 12px;
+    font-weight: 600;
+    color: #5C6A70;
+    display: block;
+}
+
+#footer p{
+    margin-right: 1em;
+}
+
+#header-small{
+        display: none;
+    }
+
+
+
+
+
+
+@media screen and (max-width:700px){
+    #header-large{
+        display: none;
+    }
+    
+    #header-small{
+        display: block;
+        position: fixed;
+        z-index: 10000;
+        width: 100%;
+        height: 7%;
+        min-height: 40px;
+        top:0;
+        left: 0;
+    }
+    
+    .drawer-menu li{
+        margin-top: 30px;
+        margin-bottom: 30px; 
+    }
+    
+    .drawer-navbar{
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .drawer-hamburger{
+        width: 32px;
+        height: 32px;
+        padding: 0px 0rem 0px;
+    }
+    
+    .drawer--right .drawer-hamburger{
+        right: 10px;
+    }
+    
+    .drawer--right.drawer-open .drawer-navbar .drawer-hamburger{
+        right: 10px;
+    }
+    
+    .drawer-hamburger-icon:before{
+        height: 3px;
+        background-color: #76B9B7;
+    }
+    
+    .drawer-hamburger-icon{
+        height: 3px;
+        background-color: #76B9B7;
+    }
+    
+    .drawer-hamburger-icon:after{
+        height: 3px;
+        background-color: #76B9B7;
+    }
+    
+    .drawer-navbar .drawer-nav{
+        padding-top: 7%;
+    }
+    
+    .drawer--right .drawer-nav{
+        right: -50%;
+    }
+    
+    .drawer-nav{
+        width:50%;
+    }
+    
+    
+    #wrapper{
+        top:7%;
+        width: 100vw;
+        height: 93%;
+        overflow-x: hidden;
+    }
+    
+    #firstview{
+        height: 100%;
+    }
+    
+    .firstview-title{
+        position: relative;
+        width: 290px;
+        height: 270px;
+        text-align: left;
+        margin-top: -3%;
+        margin: 0 auto;
+        z-index: 50;
+    }
+
+    #firstview-togediv{
+        width: 100vw;
+    }
+    
+    
+    #firstview h1{
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 39px;
+        letter-spacing:1px;
+    }
+
+    .h1-sub{
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing:1px;
+        line-height: 25px;
+        padding-left: 1px;
+        float: left;
+        clear: left;
+    }
+
+    .h1-date{
+        font-weight: 800;
+        font-size: 13px;
+        letter-spacing:1px;
+        float: left;
+        clear: left;
+        margin-top: 8px;
+        margin-left: 2px;
+    }
+
+    .h1-eng{
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing:1px;
+        float: left;
+        clear: left;
+        margin-left: 2px;
+        margin-top: 5px;
+    }
+    
+    #greeting{
+        min-height: 600px;
+    }
+    
+    #greeting-message h1{
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin: 30px;
+        font-weight: 600;
+        margin-top: 100px;
+    }
+
+    #greeting-message{
+        font-size: 12px;
+        margin: 17.5%;
+        min-width: 80vw;
+        width: 65vw;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        line-height: 25px;
+    }
+    
+    #greeting-message p{
+        line-height: 26px;
+    }
+
+    #snsIcons{
+        width: 50vw;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-around;
+
+    }
+    
+    #snsIcons img{
+        width:13vw; 
+        margin:10px;
+    }
+    
+    #concept{
+        min-height: 600px;
+    }
+
+    
+    #concept h1{
+        font-size: 20px;
+        color: #5C6A70;
+        margin-top: 10px;
+    }
+
+    #concept-title-hr{
+        width: 130px;
+        margin: 0 auto;
+        border-width: 1px 0 0 0;
+        margin-bottom: 0px;
+    }
+    
+    #concept-center{
+        float: left;
+        width: 100%;
+        min-height: 365px;
+        height:  60vh;
+        display: flex;
+        align-items: center;
+    }
+    .concept-concept{
+        margin: 0 auto;
+        padding: 0;
+        width: auto;
+        max-width: 80vw;
+        text-align: left;
+        border-left: 0;
+        display: block;
+    }
+
+    .concept-concept hr{
+        display: block;
+        width: 250px;
+        margin-top: -15px;
+    }
+
+    .concept-piece{
+        font-family: "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 70px;
+        letter-spacing:5px;
+    }
+
+    .concept-piece-ja{
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 55px;
+        letter-spacing:5px;
+    }
+
+    .concept-concept p{
+        font-weight:100;
+        font-size: 12px;
+        margin-top: 30px;
+        line-height: 20px;
+        letter-spacing:2px;
+    }
+    
+    #kotoshi{
+        margin-top: 4px;
+    }
+
+
+    #information h1{
+        font-size: 20px;
+        margin-top: 80px;
+        color: #5C6A70;
+    }
+
+    #information hr{
+        width: 190px;
+        margin: 0 auto;
+        border-width: 1px 0 0 0;
+    }
+
+    #informationbox{
+        width: 87vw;
+        height: auto;
+        min-height: 547px;
+        margin: 0 auto;
+        margin-top: 60px;
+        margin-bottom: 100px;
+        background-color: white;
+        display: flex; 
+        justify-content: space-around;
+        flex-wrap:wrap;
+    }
+
+    #information-informations{
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+    }
+
+    #information-informations hr{
+        border: 1px solid #898989;
+    }
+
+    #maplink-btn{
+        width: 172px;
+        height: 36px;
+        background-image: url(img/go-to-map.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 60px;
+        margin-bottom: 24px;
+
+    }
+
+
+    #informationbox-left{
+        min-width: 280px;
+        height: auto;
+        margin-top: 30px;
+        padding-left: 0px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #informationbox-left hr{
+        float: left;
+        margin-left: 0px;
+        width: 90%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+
+    #informationbox-right{
+        font-size: 12px;
+        min-width: 280px;
+        height: auto;
+        margin-top: 30px;
+        padding-left: 40px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        letter-spacing: 2px;
+    }
+
+    #informationbox-right dd{
+        padding-left:1em;
+        font-size: 11px;
+        margin-top: 5px;
+    }
+    #informationbox-right dt{
+        margin-top: 7px;
+        font-size: 12px;
+    }
+
+
+    .info-div-1{
+        float: left;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 23px;
+        clear: left;
+    }
+
+    .info-div-2{
+        font-family: "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+        float: left;
+        font-size: 8px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 17px;
+        clear: left;
+    }
+
+    #exhibitors h1{
+        font-size: 20px;
+        margin-top: 80px;
+        color: #5C6A70;
+    }
+
+    #exhibitors hr{
+        width: 170px;
+        border-width: 1px 0 0 0;
+    }    
+
+    #exhibitors-info{
+        max-width: 80vw;
+        min-width: 300px;
+        margin: 0 auto;
+        margin-top: 30px;
+        border: 1px solid lightgray;
+        text-align: center;
+    }
+    
+    #exhibitors-info h3{
+        font-size: 12px;
+    }
+    
+    #exhibitors-info span{
+        font-size: 12px;
+    }
+    
+    #exhibitors-info img{
+        width: 100px;
+    }
+    
+    #lavo{
+        max-width: 80vw;
+        min-width: 300px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .lavolatories{
+        width: 95%;
+        font-size: 12px;
+        height: 50px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid lightgray;
+
+    }
+
+    #lavo-product .lavolatories:hover {
+        width: 95%;
+        font-size: 12px;
+        height: 50px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #76B9B7;
+        box-shadow:1px 0 1px 1px #76B9B7 inset;
+    }
+
+    #lavo-media .lavolatories:hover {
+        width: 95%;
+        font-size: 12px;
+        height: 50px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #F5EA57;
+        box-shadow:1px 0 1px 1px #F5EA57 inset;
+    }
+
+    #lavo-media .lavolatories{
+        background-image: url(img/lavo-media-bg.png);
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    #lavo-product .lavolatories{
+        background-image: url(img/lavo-product-bg.png);
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    
+    
+    #lavo-product{
+        min-width: 300px;
+        max-width: 100%;
+        height: auto;
+        padding-bottom: 8px;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        border-left: 5px solid #76B9B7;
+        border-bottom: 1px solid lightgray;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    #lavo-media{
+        min-width: 300px;
+        max-width: 100%;
+        height: auto;
+        padding-bottom: 8px;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        border-left: 5px solid #F5EA57;
+        border-bottom: 1px solid lightgray;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    
+    
+    #blog h1{
+        font-size: 20px;
+        margin-top: 80px;
+        color: #5C6A70;
+    }
+
+    #blog hr{
+        width: 6em;
+        margin: 0 auto;
+    }
+
+    #other-exhibition h1{
+        font-size: 20px;
+        margin-top: 40px;
+        color: #5C6A70;
+    }
+
+    #other-exhibition hr{
+        width: 140px;
+        margin: 0 auto;
+        border-width: 1px 0 0 0;
+    }
+    
+    
+
+    .other-exhibitions{
+        margin: 20px;
+    }
+    
+    .exhibitionbox{
+        min-width: 300px;
+        max-width: 80%;
+        padding-top: 20px;
+    }
+    
+    
+    .exhibitionbox span{
+        float: left;
+        color: #5C6A70;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .exhibitionbox dl{
+        float: left;
+        margin: 5%;
+        margin-top:5%;
+        margin-left: 10%;
+        font-size: 13x;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height:25px;
+        clear: right;
+        text-align: left;
+    }
+
+    .exhibitionbox dd{
+        padding-left: 1em;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    
+    #footer p{
+        font-size: 8pt;
+        text-align: center;
+        width:300px;
+        height: auto;
+        margin: auto;
+    }
+
+}
+
+body{
+    overflow-x: hidden;
+}
