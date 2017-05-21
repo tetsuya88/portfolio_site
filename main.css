@@ -5,126 +5,85 @@
 
 html{
     height:  100%;
+    -webkit-overflow-scrolling:touch;
 }
 
 body{
     text-align: center;
     background-color:#ffffff;
-    font-family:Avenir , "Open Sans" , "游ゴシック","Helvetica Neue" , Helvetica , Arial , Verdana , Roboto  , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+    font-family:Helvetica, Avenir , "Open Sans" , "游ゴシック","Helvetica Neue" , Arial , Verdana , Roboto  , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
     margin: 0;
     width:100vw;
     height: 100%;
 }
 
-h1{
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 25px;
-    letter-spacing:2px;
-    margin-top: 0px;
-}
+/*ヘッダーのスタイル*/
+/* 一旦消去中　*/
 
 
-.header{
-    display: flex;
+#header{
+    
+    height: 0%;
+    
+    display: none;
     position: fixed;
-    width: 100vw;
-    height: 10vh;
-    top: 90vh;
-    color: #5C6A70;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: center; 
-    background-color: white;
-}
-
-#header-large hr{
-    border-width: 1px 0 0 0;
-}
-
-#wrapper{
-    position: absolute;
-    width: 100vw;
-    height: 90vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling:touch;
-}
-
-
-#firstview{
-    position: relative;
-    float: left;
+    z-index: 5;
     width: 100%;
-    height:90vh;
-    background-image:url(img/firstview-bg.png);
-    background-color: #F5EA57;
-    background-position: center;
-    background-size: contain;
-    background-repeat: repeat-y;
-    display: flex;
-    align-items: center;
-    color: #333B3F;
-}
+    height: 7%;
+    min-height: 40px;        
+    top:0;
+    left: 0;
+    }
 
-.firstview-title{
-    position: relative;
-    width: 800px;
-    height: 270px;
-    text-align: left;
+.drawer-menu li{
+    margin-top: 30px;
+    margin-bottom: 30px; 
+}
+    
+.drawer-navbar{
+    display: block;
     margin: 0 auto;
-    z-index: 50;
+    background-color: RGBA(0,0,0,0);
+}
+    
+.drawer-hamburger{
+    opacity: 1;
+    width: 32px;
+    height: 32px;
+    padding: 0px 0rem 0px;
+}
+    
+.drawer--left .drawer-hamburger{
+    left: 10px;
+}
+    
+.drawer--left.drawer-open .drawer-navbar .drawer-hamburger{
+    left: 10px;
+}
+    
+.drawer-hamburger-icon:before{
+    height: 3px;
+    background-color: #232323;
+}
+    
+.drawer-hamburger-icon{
+    height: 3px;
+    background-color: #232323;
+}
+    
+.drawer-hamburger-icon:after{
+    height: 3px;
+    background-color: #232323;
 }
 
-#firstview h1{
-    font-size: 55px;
-    font-weight: 600;
-    line-height: 58px;
-    letter-spacing:5px;
+.drawer--left .drawer-nav{
+    left: -61.8%;
+}
+    
+.drawer-nav{
+    width:61.8%;
 }
 
-.h1-sub{
-    font-weight: 600;
-    font-size: 40px;
-    letter-spacing:7px;
-    line-height: 48px;
-    float: left;
-    clear: left;
-}
-
-.h1-date{
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing:7px;
-    float: left;
-    clear: left;
-    margin-top: 7px;
-    margin-left: 2px;
-}
-
-.h1-eng{
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing:3px;
-    float: left;
-    clear: left;
-    margin-left: 5px;
-}
-
-#firstview-togediv{
-    position: absolute;
-    width: 100vw;
-    height: auto;
-    left:0px;
-    bottom: 0px;
-    margin-bottom: -5px;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    display: -webkit-flex;
-    -webkit-justify-content: center;
-}
-        
 .header_content{
     width: 133px;
     text-align: center;
@@ -136,6 +95,78 @@ h1{
     font-size: 20px;
     color: #5C6A70;
 }
+
+
+/* ファストビューのスタイル */
+
+#firstview{
+    width: 100%;
+    height: 100vh;
+}
+
+#firstview-title{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 61.8%;
+    height:60vh;
+    color: #232323;
+}
+
+#title_button{
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 50%;
+    min-width: 422px;
+    max-width: 467px;
+    height:400px;
+    color: #232323;
+
+}
+
+#firstview h1{
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 200;
+    letter-spacing:6px;
+}
+
+.h1-eng{
+    float: left;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 120px;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing:3px;
+}
+
+
+.link_button{
+    position: relative;
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    border:5px;
+    border-color: #979797;
+}
+
+        
+#firstview_content{
+    display: block;
+    width:38.2%;
+    height: 100vh;
+    background-color: #AFE689;
+}
+
+
+
 
 
 #greeting{
@@ -295,81 +326,9 @@ h1{
     margin-right: 1em;
 }
 
-#header-small{
-        display: none;
-    }
-
-
-
-
 
 
 @media screen and (max-width:700px){
-    #header-large{
-        display: none;
-    }
-    
-    #header-small{
-        display: block;
-        position: fixed;
-        z-index: 10000;
-        width: 100%;
-        height: 7%;
-        min-height: 40px;
-        top:0;
-        left: 0;
-    }
-    
-    .drawer-menu li{
-        margin-top: 30px;
-        margin-bottom: 30px; 
-    }
-    
-    .drawer-navbar{
-        display: block;
-        margin: 0 auto;
-    }
-    
-    .drawer-hamburger{
-        width: 32px;
-        height: 32px;
-        padding: 0px 0rem 0px;
-    }
-    
-    .drawer--right .drawer-hamburger{
-        right: 10px;
-    }
-    
-    .drawer--right.drawer-open .drawer-navbar .drawer-hamburger{
-        right: 10px;
-    }
-    
-    .drawer-hamburger-icon:before{
-        height: 3px;
-        background-color: #76B9B7;
-    }
-    
-    .drawer-hamburger-icon{
-        height: 3px;
-        background-color: #76B9B7;
-    }
-    
-    .drawer-hamburger-icon:after{
-        height: 3px;
-        background-color: #76B9B7;
-    }
-    
-    .drawer-navbar .drawer-nav{
-        padding-top: 7%;
-    }
-    
-    .drawer--right .drawer-nav{
-        right: -50%;
-    }
-    
-    .drawer-nav{
-        width:50%;
-    }
     
     
     #wrapper{

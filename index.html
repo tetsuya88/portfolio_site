@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Yamaura Tetsuya</title>
+    <title>Tetsuya Yamaura</title>
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="shortcut icon" href="img/favicon.ico">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
     
     <!-- 検索・OG・文責など -->
     <meta name="copyright" content="山浦徹也">
@@ -27,49 +29,58 @@
     
     <!-- アクセス解析 -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-89547114-1', 'auto');
-      ga('send', 'pageview');
-
+        ga('create', 'UA-89547114-1', 'auto');
+        ga('send', 'pageview');
+        
+        //ハンバーガー処理
+        $(document).ready(function() {
+        $('.drawer').drawer();
+        });
+        
     </script>
 </head>
-
-<body class="drawer drawer--right">
-   <section class="header" id="header-small">
+<!--ハンバーガーヘッダーバー-->
+<body class="drawer drawer--left">
+   <section id="header">
      <header class="drawer-navbar" role="banner">
                     <button type="button" class="drawer-toggle drawer-hamburger">
                       <span class="sr-only">toggle navigation</span>
                       <span class="drawer-hamburger-icon"></span>
                     </button>
            <nav class="drawer-nav" role="navigation">
-               <ul class="drawer-menu drawer-menu--right">
-                    <li><a class ="header_content" href="#">HOME</a></li>
-                    <li><a class ="header_content" href="#concept">CONCEPT</a></li>
-                    <li><a class ="header_content" href="#information">INFORMATION</a></li>
-                    <li><a class ="header_content" href="#exhibitors">EXHIBITORS</a></li>
-                    <li><a class ="header_content" href="#blog">BLOG</a></li>
+               <ul class="drawer-menu drawer-menu--left">
+                    <li><a class ="header_content" href="#">Top</a></li>
+                    <li><a class ="header_content" href="#concept">About</a></li>
+                    <li><a class ="header_content" href="#information">Works</a></li>
                 </ul>
            </nav>
     </header>
    </section>
+   
+   
    <main role="main">
-    <div id="wrapper">
-        <!--ファーストビューの表示:文字以外は背景画像と降ってくるピースで構成-->
+        
+        
         <div id="firstview">
-            <div class="firstview-title">
-                <h1>首都大学東京</h1>
-                <span class="h1-sub">システムデザイン学部・研究科</span>
-                <span class="h1-sub">インダストリアルアートコース・学域</span>
-                <span class="h1-sub">卒業・修了制作展2017</span>
-                <span class="h1-date">平成29年2月4日|土| - 2月6日|月| 10時-17時</span>
-                <span class="h1-eng">Tokyo Metropolitan University Faculty of System Design</span>
-                <span class="h1-eng">Division Industrial Art Graduation Exhibition</span>
-            </div>
+           <div id="firstview-title">
+                <div id="title_button">
+                    <h1>TETSUYA YAMAURA</h1>
+                    <p class="h1-eng">Web/App Designer/Engineer</p>
+                    <a class="link_button" href="#"><img src="img/about.png" alt="About me" style="width:100%;hight:100%;"></a>
+                    <a class="link_button" href="#"><img src="img/works.png" alt="Works"style="width:100%;hight:100%;"></a>
+                </div>
+                
+           </div>
+           <div id="firstview_content">
+           </div>
         </div>
+        
+        
 
         <!-- 挨拶 -->
         <section id="greeting">
@@ -102,17 +113,7 @@
         <footer id="footer">
             <p>©2017 Yamaura Tetsuya All Right Reserved</p>
         </footer>
-    </div>
    </main>
-        <!-- ヘッダーバー：ヘッダーバーと言いつつ画面下に固定で配置？ -->
-    <section class="header" id="header-large">
-        <a class ="header_content" href="#concept">CONCEPT</a>
-        <a class ="header_content" href="#information">INFORMATION</a>
-        <a class ="header_content" href="#">HOME</a>
-        <a class ="header_content" href="#exhibitors">EXHIBITORS</a>
-        <a class ="header_content" href="#blog">BLOG</a>
-        <hr style="width:90%;" color="#5C6A70">
-    </section>
     
 </body>
 </html>
