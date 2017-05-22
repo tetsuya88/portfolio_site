@@ -169,62 +169,154 @@ body{
 }
 
 
+/* 自己紹介のスタイル */
 
-
-
-#greeting{
+#about{
     position: relative;
-    float: left;
-    background:#ffffff;
+    background:#f5ea57;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
-    align-content: center;
-    z-index: 15000;
-}
-
-#greeting-content{
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1440px;
-    background:#ffffff;
-    display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-content: center;
-    color: #5C6a70;
+}
+
+#left_content{
+    position: relative;
+    width: 61.8%;
+    height: 100%;
+    background: #fff
+}
+
+#left_content h1{
+    font-size: 24px;
+    font-weight: 200;
+    text-align: left;
+    margin-right: 90%;
+    margin-bottom: 30px;
+}
+
+#life{
+    width: 80%;
+    margin: 50px auto;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.history{
+    width: 600px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items:baseline;
+    justify-content: flex-start;
+}
+
+.history span{
+    display: block;
+    margin: 5px;
+    margin-right: 30px;
+    margin-left:0; 
+}
+
+#introduction{
+    width: 80%;
+    margin: 50px auto;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+#introduction p{
+    width: 90%;
+    max-width: 650px;
+}
+
+#hobby{
+    width: 80%;
+    margin: 50px auto;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+
+#right_content{
+    position: relative;
+    width: 38.2%;
+    height: 100%;
     text-align: center;
 }
 
-#greeting-message h1{
-    font-size: 15pt;
-    letter-spacing: 1px;
-    margin: 13px;
+#right_content h1{
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 200;
 }
 
-#greeting-message{
-    margin: 17.5%;
-    max-width: 800px;
-    min-width: 300px;
-    width: 65vw;
-    margin-top: 5%;
-    margin-bottom: 5%;
+#portrait{
+    width: 200px;
+    height: 200px;
+    margin:10px auto;
+    margin-top: 15%;
+    border: solid 5px;
+    border-color: #ffffff;
 }
 
-#snsIcons{
+#name_and_contact{
     margin: 0 auto;
-    width: 20vw;
+    width: 140px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
+}
+
+#name_and_contact h1{
+    margin: 0 auto;
+    width: 140px;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+#name_and_contact span{
+    margin: 0 auto;
+    width: 140px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#name_and_contact img{
+    width:25px;
+    height: 25px;
+    margin:10px;
+}
+
+#skill_icons{
+    margin: 0 auto;
+    width: 75%;
+    max-width: 445px;
+    height: 300px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
-    justify-content: space-around;
-    
+    justify-content: center;
 }
 
-#snsIcons img{
-    width:70px; 
-    margin:10px;
+.skill{
+    font-size:12px;
+    margin: 10px;
 }
+
 
 #concept{
     position: relative;
