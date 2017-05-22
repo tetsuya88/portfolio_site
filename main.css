@@ -186,7 +186,10 @@ body{
     position: relative;
     width: 61.8%;
     height: 100%;
-    background: #fff
+    background: #fff;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 #left_content h1{
@@ -194,12 +197,12 @@ body{
     font-weight: 200;
     text-align: left;
     margin-right: 90%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #life{
-    width: 80%;
-    margin: 50px auto;
+    width: 75%;
+    margin: 40px auto;
     font-size: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -217,14 +220,14 @@ body{
 
 .history span{
     display: block;
-    margin: 5px;
+    margin: 8px;
     margin-right: 30px;
     margin-left:0; 
 }
 
 #introduction{
-    width: 80%;
-    margin: 50px auto;
+    width: 75%;
+    margin: 40px auto;
     font-size: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -233,18 +236,24 @@ body{
 }
 
 #introduction p{
-    width: 90%;
+    width: 95%;
     max-width: 650px;
 }
 
 #hobby{
-    width: 80%;
-    margin: 50px auto;
+    width: 75%;
+    margin: 40px auto;
     font-size: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     text-align: left;
+}
+
+.interest{
+    text-align: center;
+    font-size:15px;
+    margin: 10px;
 }
 
 
@@ -263,11 +272,11 @@ body{
 }
 
 #portrait{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin:10px auto;
     margin-top: 15%;
-    border: solid 5px;
+    border: solid 8px;
     border-color: #ffffff;
 }
 
