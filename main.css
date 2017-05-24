@@ -336,91 +336,53 @@ body{
 }
 
 
-#concept{
-    position: relative;
-    float: left;
-    width: 100%;
-    height:90vh;
-    background-color: #F5EA57;
-    text-align: center;
-    display: block;
-    color: #2C3C42;
-}
+/* 作品紹介のスタイル */
 
-#concept h1{
-    color: #5C6A70;
-}
-
-#concept-togediv{
+#works{
+    background-color: darksalmon;
+    height: 100vh;
     width: 100%;
-    height: auto;
-    z-index: 9999;
     display: flex;
-    justify-content: center;
+    flex-wrap: nowrap;
 }
 
-#concept-title-hr{
-    width: 170px;
-    margin: 0 auto;
-    border-width: 1px 0 0 0;
-    
-}
-#concept-center{
-    float: left;
-    width: 100%;
-    height:  60vh;
+#works_button{
+    width: 61.8%;
+    height: 100%;
+    background-color: RGBA(255,255,255,0.5);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    position: relative;
-    z-index: 10;
+    justify-content: center;
 }
 
-.concept-concept{
-    margin: 0 auto;
-    max-width: 800px;
-    padding-left: 20px;
-    width: auto;
-    text-align: left;
-    display: block;
-    border-left: 2px solid #2C3C42;
+
+#genre_link{
+    width:750px;
+    height: 475px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
 }
 
-.concept-concept hr{
-    width: 400px;
-    border-width: 1px 0 0 0;
-    margin-top: -10px;
-    display: none;
+.genre{
+    width: 200px;
+    height: 200px;
+    
+}
+.genre img{
+    width: 200px;
+    height: 200px;
+    opacity: 1;
 }
 
-.concept-piece{
-    font-family: "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
-    font-size: 70px;
-    font-weight: 600;
-    line-height: 70px;
-    letter-spacing:5px;
+#detail_view{
+    width: 38.2%;
+    height: 100%;
 }
 
-.concept-piece-ja{
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 55px;
-    letter-spacing:5px;
-}
 
-.concept-concept p{
-    font-weight:100;
-    font-size: 16px;
-    margin-top: 10px;
-    line-height: 29px;
-    letter-spacing:1px;
-}
-
-.togetoges{
-    width: 100%;
-    height: 10.2%;
-    min-width: 970px;
-}
     
 #footer{
     width:100%;
