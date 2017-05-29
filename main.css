@@ -380,21 +380,12 @@ body{
     height: 100%;
 }
 
-.back_button{
-    float: left;
-    position: fixed;
-    margin-top: 8vh;
-    margin-left: 8vh;
-    width: 40px;
-    height: 40px;
-    background-color: black;
-}
-
 .modal_container{
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    z-index: 1000;
 }
 
 .modal_container .main{
@@ -409,6 +400,7 @@ body{
 .modal_container h1{
     width: 100%;
     text-align: left;
+    margin-bottom: 15px;
 }
 
 .infomation{
@@ -417,7 +409,7 @@ body{
 }
 
 .infomation dl{
-    width: 300px;
+    width: 290px;
     padding: 15px;
     background-color: coral;
 }
@@ -445,7 +437,6 @@ body{
 
 .article{
     width: calc(100% - 350px);
-    padding-top: 15px;
     text-align: left;
 }
 
@@ -455,7 +446,18 @@ body{
 
 .article p{
     width: 100%;
-    margin: 10px 0 10px;
+    margin: 20px 0 20px;
+    line-height: 2.5em;
+}
+
+.back_button{
+    float: left;
+    position: fixed;
+    margin-top: 8vh;
+    margin-left: 8vh;
+    width: 40px;
+    height: 40px;
+    background-color: black;
 }
 
 #footer{
@@ -474,17 +476,6 @@ body{
 #footer p{
     margin-right: 1em;
 }
-
-.back_button{
-    float: left;
-    top: 10vh;
-    left: 10vw;
-    width: 40px;
-    height: 40px;
-    background-color: black;
-}
-
-
 
 @media screen and (max-width:700px){
 
