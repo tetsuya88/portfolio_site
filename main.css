@@ -212,11 +212,11 @@ body{
   background-image: url("img/about_icon.svg");
   background-position: center;
   background-size: 100%;
-  background-color: rgba(255, 255, 255,1);
+  background-color: #ffffff;
 }
 
 #top_about_button:hover{
-  background-color: rgba(175, 230, 137,0.7);
+  background-color: #ead56b;
   background-image: url("img/about_icon_hover.svg");
 }
 
@@ -224,11 +224,11 @@ body{
   background-image: url("img/works_icon.svg");
   background-position: center;
   background-size: 100%;
-  background-color: rgba(255, 255, 255,1);
+  background-color: #ffffff;
 }
 
 #top_works_button:hover{
-  background-color: rgba(241, 165, 99,0.7);
+  background-color: #cd5b4b;
   background-image: url("img/works_icon_hover.svg");
 }
 
@@ -237,7 +237,7 @@ body{
     display:block;
     width:38.2%;
     height: 0;
-    background-color: #AFE689;
+    background-color: #a5a430;
     animation: slideDown 0.5s ease 1.5s 1 forwards;
     -webkit-animation: slideDown 0.5s ease 1.5s 1 forwards;
 
@@ -248,7 +248,7 @@ body{
 
 #about{
     position: relative;
-    background:#f5ea57;
+    background:#f6e8aa;
     width: 100%;
     height: 100vh;
     min-height: 750px;
@@ -415,7 +415,7 @@ body{
 /* 作品紹介のスタイル */
 
 #works{
-    background-color: rgba(241, 165, 99,1);
+    background-color: #cd5b4b;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -425,7 +425,7 @@ body{
 #works_button{
     width: 61.8%;
     height: 100%;
-    background-color: RGBA(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.5);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -436,13 +436,19 @@ body{
 .genre_link{
     width:750px;
     height: 475px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
+}
+
+.works_genre{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
 }
 
 .genre{
+    display: block;
     width: 200px;
     height: 200px;
     text-indent: 100%;
