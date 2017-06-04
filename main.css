@@ -491,38 +491,62 @@ body{
     height: 100%;
 }
 
+
+
+/* 各作品のページのスタイル */
+
 .modal_container{
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10vh;
+    width: 80%;
     z-index: 1000;
+    text-align: right;
 }
 
-.modal_container .main{
-    margin: 0 auto;
-    margin-top: 15vh;
-    width: 80%;
+.modal_container .main_info{
+    text-align: left;
+    position: fixed;
+    width: 30.56%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+.back_button{
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("img/back_button.svg");
+    background-position: center;
+    background-size: cover;
+
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .modal_container h1{
     width: 100%;
-    text-align: left;
+    font-weight: bold;
+    font-size: 19px;
     margin-bottom: 15px;
 }
 
+.new_line::before{
+  content: "\A";
+  white-space: pre;
+}
+
 .information{
-    width: 320px;
+    width: 85%;
     text-align: left;
 }
 
 .information dl{
-    width: 290px;
-    padding: 15px;
-    background-color: coral;
+    width: calc(100%-30px);
+    padding: 5%;
+    background-color: rgb(255, 255, 193);
 }
 
 .information dt{
@@ -547,12 +571,20 @@ body{
 }
 
 .article{
-    width: calc(100% - 350px);
+    display: inline-block;
+    padding-top: 30px;
+    width: 61.8%;
     text-align: left;
 }
 
 .article img{
     width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.article h1{
+  font-size: 17px;
+  margin-bottom: 1.5em;
 }
 
 .article p{
@@ -561,14 +593,17 @@ body{
     line-height: 2.5em;
 }
 
-.back_button{
-    float: left;
-    position: fixed;
-    margin-top: 8vh;
-    margin-left: 8vh;
-    width: 40px;
-    height: 40px;
-    background-color: black;
+.article .web_link{
+  display: block;
+  width: 10em;
+  height: 1.5em;
+  margin: 2.5em auto;
+  margin-bottom: 5em;
+  text-decoration: none;
+  color: #9b9c8e;
+  background-color: rgb(255, 255, 193);
+  text-align: center;
+
 }
 
 #footer{
