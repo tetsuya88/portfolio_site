@@ -52,7 +52,7 @@
             var view_target = document.getElementById(selectedID);
             var post_target = document.getElementById(post_target_id);
             post_target.style.display = "none";
-            view_target.style.display = "flex";
+            view_target.style.display = "block";
             post_target_id = selectedID;
         }
     </script>
@@ -215,7 +215,7 @@
             <div id="works_button">
                 <div class="genre_link">
 
-                    <ul class="works_genre" id="works_first" style="display:flex;">
+                    <ul class="works_genre" id="works_first" style="display:block;">
                         <il id="web" class="genre" href="#" title="Webの作品です。" onclick="buttonChange('works_web')">Web</il>
                         <il id="interact" class="genre" href="#" title="インタラクション作品です。"onclick="buttonChange('works_interact')">Interaction</il>
                         <il id="movie" class="genre" href="#" title="映像作品です。"onclick="buttonChange('works_movie')">Movie</il>
@@ -226,7 +226,7 @@
 
                     <ul class="works_genre" id="works_web" style="display:none;">
                         <il>
-                            <a href="#" class="genre article_link">ia graduation site</a>
+                            <a href="./article/web_iagw2017.html" class="genre article_link">ia graduation site</a>
                         </il>
                         <il>
                             <a href="#" class="genre article_link">日野市子どもカレンダー「ぽかぽか」</a>
@@ -237,7 +237,7 @@
                     </ul>
 
                     <ul class="works_genre" id="works_interact" style="display:none;">
-                        <il class="genre">
+                        <il>
                             <a href="#" class="genre article_link">YabaCoin System</a>
                         </il>
                         <il>
