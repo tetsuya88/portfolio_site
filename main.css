@@ -441,10 +441,13 @@ body{
 .works_genre{
   width: 100%;
   height: 100%;
+  opacity: 0;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: space-between;
+  animation: fadeIn 2.5s ease 0.5s 1 forwards;
+  -webkit-animation: fadeIn 2.5s ease 0.5s 1 forwards;
 }
 
 .genre{
@@ -490,6 +493,20 @@ body{
   background-image: url("img/works/hardware.svg");
   background-position: center;
   background-size: 100%;
+}
+
+.article_link{
+  width: 160px;
+  height: 60px;
+  padding: 20px;
+  padding-top: 120px;
+  text-align: left;
+  text-indent: 0;
+  text-decoration: none;
+  white-space: normal;
+  background-color: rgba(255,255,255,0.5);
+  color: #232323;
+  font-size: 14px;
 }
 
 #detail_view{
