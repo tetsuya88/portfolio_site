@@ -212,24 +212,29 @@
         </section>
         <!-- 作品リンク -->
         <section id="works">
-            <div id="works_button">
-                <div class="genre_link">
+            <section id="works_button">
+                <nav class="genre_link">
 
                     <ul class="works_genre" id="works_first" style="display:block;">
                         <il id="web" class="genre" href="#" title="Webの作品です。" onclick="buttonChange('works_web')">Web</il>
                         <il id="interact" class="genre" href="#" title="インタラクション作品です。"onclick="buttonChange('works_interact')">Interaction</il>
                         <il id="movie" class="genre" href="#" title="映像作品です。"onclick="buttonChange('works_movie')">Movie</il>
-                        <il id="app" class="genre" class="genre" href="#" title="アプリケーションの作品です。"onclick="buttonChange('works_app')">Application</il>
+                        <il id="app" class="genre" href="#" title="アプリケーションの作品です。"onclick="buttonChange('works_app')">Application</il>
                         <il id="graphics" class="genre" href="#" title="グラフィック作品です。"onclick="buttonChange('works_graphics')">Graphics</il>
                         <il id="hardware" class="genre" href="#" title="製品や端末の作品です。"onclick="buttonChange('works_hardware')">Hardware</il>
                     </ul>
 
                     <ul class="works_genre" id="works_web" style="display:none;">
-                        <il>
-                            <a href="./article/web_iagw2017.html" class="genre article_link">ia graduation site</a>
+                        <il class="genre article_link">
+                            <img src="./img/works/web_iagw2017/background.png" alt="ia graduation site" style="position:relative;right:110px;">
+                            <div>
+                              <p>2017年<br>卒業・修了制作展<br>広報サイト</p>
+                              <a href="./article/web_iagw2017.html">ia graduation site</a>
+                            </div>
                         </il>
-                        <il>
-                            <a href="#" class="genre article_link">日野市子どもカレンダー「ぽかぽか」</a>
+                        <il class="genre article_link">
+                            <p>日野市<br>子どもカレンダー<br>「ぽかぽか」</p>
+                            <a href="#">日野市子どもカレンダー「ぽかぽか」</a>
                         </il>
                         <il>
                             <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
@@ -306,11 +311,11 @@
                         </il>
                     </ul>
 
-                </div>
-            </div>
-            <div id="detail_view">
+                </nav>
+            </section>
+            <section id="detail_view">
 
-            </div>
+            </section>
         </section>
 
         <footer id="footer">
