@@ -360,6 +360,7 @@ body{
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    background:#f6e8aa;
 }
 
 #right_content h1{
@@ -476,6 +477,14 @@ body{
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    transform: scale(1);
+    transition-property:transform;
+    transition-timing-function:ease-in-out;
+    transition-duration:0.3s;
+}
+
+.genre:hover{
+  transform: scale(1.1);
 }
 
 .genre_link #web{
