@@ -9,8 +9,6 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="shortcut icon" href="img/favicon.ico">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
 
     <!-- 検索・OG・文責など -->
     <meta name="copyright" content="山浦徹也">
@@ -38,12 +36,15 @@
         ga('create', 'UA-89547114-1', 'auto');
         ga('send', 'pageview');
 
+        //動きとりあえずここに書く
+
         //ハンバーガー処理
-        $(document).ready(function() {
-        $('.drawer').drawer();
+        $(function(){
+            $('#navToggle').click(function(){
+                $('header').toggleClass('openNav');
+            });
         });
 
-        //動きとりあえずここに書く
 
         var post_target_id = "works_first";
 
@@ -57,24 +58,22 @@
         }
     </script>
 </head>
-<!--ハンバーガーヘッダーバー-->
-<body class="drawer drawer--left">
-   <section id="header">
-     <header class="drawer-navbar" role="banner">
-                    <button type="button" class="drawer-toggle drawer-hamburger">
-                      <span class="sr-only">toggle navigation</span>
-                      <span class="drawer-hamburger-icon"></span>
-                    </button>
-           <nav class="drawer-nav" role="navigation">
-               <ul class="drawer-menu drawer-menu--left">
-                    <li><a class ="header_content" href="#">Top</a></li>
-                    <li><a class ="header_content" href="#about">About</a></li>
-                    <li><a class ="header_content" href="#works">Works</a></li>
-                </ul>
-           </nav>
-    </header>
-   </section>
 
+<body>
+
+
+   <header class="header_bar">
+     <div id="navToggle">
+       <div>
+         <span></span> <span></span> <span></span>
+       </div>
+     </div>
+     <nav>
+         <a href="#">Top</a>
+         <a href="#about">About</a>
+         <a href="#works" onclick="buttonChange('works_first')">Works</a>
+     </nav>
+   </header>
 
    <main role="main">
 
