@@ -30,6 +30,17 @@ html{
   100% {height: 100vh}
 }
 
+/* 上へスライドアウト */
+@keyframes slideUp {
+  0% {height: 100vh}
+  100% {height: 0}
+}
+
+@-webkit-keyframes slideUp {
+  0% {height: 100vh}
+  100% {height: 0}
+}
+
 /*拡大表示*/
 @keyframes scaleUp {
   0% {transform: scale(0)}
@@ -256,14 +267,22 @@ body{
 }
 
 
-#firstview_content{
+.firstview_content{
     display:block;
     width:38.2%;
-    height: 0;
+    height: 100vh;
     background-color: #a5a430;
-    animation: slideDown 0.5s ease 1.5s 1 forwards;
-    -webkit-animation: slideDown 0.5s ease 1.5s 1 forwards;
+    transition-property: height;
+    -webkit-transition: 1.5s ease-in-out;
+    transition: 1.5s ease-in-out;
+    animation: slideDown 0.5s ease 1.5s 1 backwards;
+    -webkit-animation: slideDown 0.5s ease 1.5s 1 backwards;
+}
 
+.disapear{
+  height: 0;
+  -webkit-transition: 1.5s ease-in-out;
+  transition: 1.5s ease-in-out;
 }
 
 

@@ -47,8 +47,10 @@
 
         $(function(){
             $('#top_about_button').hover(
-
-            );
+              function(){
+                  $('.firstview_content').toggleClass('disapear');
+                  console.log("動いてるで");
+            });
         });
 
         var post_target_id = "works_first";
@@ -91,7 +93,7 @@
                 </div>
 
            </div>
-           <div id="firstview_content">
+           <div class="firstview_content">
            </div>
         </div>
 
