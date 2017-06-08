@@ -48,10 +48,26 @@
         $(function(){
             $('#top_about_button').hover(
               function(){
-                  $('.firstview_content').toggleClass('disapear');
+                  $('.firstview_content').toggleClass('firstview_disapear');
+                  console.log("動いてるで");
+            });
+            $('#top_works_button').hover(
+              function(){
+                  $('.firstview_content').toggleClass('firstview_disapear');
                   console.log("動いてるで");
             });
         });
+
+        var post_sectionID = "firstview";
+
+        function sectionChange(section_id){
+          var sectionID = section_id;
+          var appear_section = document.getElementById(sectionID);
+          var disappear_section = document.getElementById(post_sectionID);
+          appear_section.style.display = "flex";
+          disappear_section.style.display = "none";
+          post_sectionID = sectionID;
+        }
 
         var post_target_id = "works_first";
 
@@ -88,8 +104,8 @@
                 <div id="title_button">
                     <h1>TETSUYA YAMAURA</h1>
                     <p class="job">Web/App Designer/Engineer</p>
-                    <a class="link_button" id="top_about_button" href="#about" title="自己紹介です">About</a>
-                    <a class="link_button" id="top_works_button" href="#works" title="作品紹介です">Works</a>
+                    <a class="link_button" id="top_about_button" href="#about" title="自己紹介です" onclick="sectionChange('about')">About</a>
+                    <a class="link_button" id="top_works_button" href="#works" title="作品紹介です"onclick="sectionChange('works')">Works</a>
                 </div>
 
            </div>

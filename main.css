@@ -166,10 +166,16 @@ body{
 /* ファストビューのスタイル */
 
 #firstview{
+    position: absolute;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-wrap: nowrap;
+    background: #fff;
+    z-index: 10000;
+    transition-property:opacity;
+    transition-timing-function:ease-in-out;
+    transition-duration:0.5s;
 }
 
 #firstview-title{
@@ -178,10 +184,10 @@ body{
     align-items: center;
     width: 61.8%;
     height:100vh;
-    opacity: 0;
+    opacity: 1;
     color: #232323;
-    animation: fadeIn 2.5s ease 0.5s 1 forwards;
-    -webkit-animation: fadeIn 2.5s ease 0.5s 1 forwards;
+    animation: fadeIn 2.5s ease 0.5s 1 backwards;
+    -webkit-animation: fadeIn 2.5s ease 0.5s 1 backwards;
 }
 
 #title_button{
@@ -204,8 +210,8 @@ body{
     width: 100%;
     margin-bottom: 5px;
     font-size: 25px;
-    font-weight: 200;
-    letter-spacing:6px;
+    font-weight: normal;
+    letter-spacing:4px;
 }
 
 .job{
@@ -273,31 +279,35 @@ body{
     height: 100vh;
     background-color: #a5a430;
     transition-property: height;
-    -webkit-transition: 1.5s ease-in-out;
-    transition: 1.5s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
     animation: slideDown 0.5s ease 1.5s 1 backwards;
     -webkit-animation: slideDown 0.5s ease 1.5s 1 backwards;
 }
 
-.disapear{
+.firstview_disapear{
   height: 0;
-  -webkit-transition: 1.5s ease-in-out;
-  transition: 1.5s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 
 /* 自己紹介のスタイル */
 
 #about{
-    position: relative;
+    position: absolute;
     background:#f6e8aa;
     width: 100%;
     height: 100vh;
     min-height: 750px;
-    display: flex;
+    display: none;
     flex-wrap: nowrap;
     justify-content: center;
     align-content: center;
+    z-index: 5000;
+    transition-property:opacity;
+    transition-timing-function:ease-in-out;
+    transition-duration:0.5s;
 }
 
 #left_content{
@@ -449,11 +459,15 @@ body{
 /* 作品紹介のスタイル */
 
 #works{
+    z-index: 1000;
     background-color: #cd5b4b;
     height: 100vh;
     width: 100%;
-    display: flex;
+    display: none;
     flex-wrap: nowrap;
+    transition-property:opacity;
+    transition-timing-function:ease-in-out;
+    transition-duration:0.5s;
 }
 
 #works_button{
