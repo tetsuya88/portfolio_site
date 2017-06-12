@@ -48,23 +48,25 @@
         $(function(){
             $('#top_about_button').hover(
               function(){
-                  $('.firstview_content').toggleClass('firstview_disapear');
-                  console.log("動いてるで");
+                  $('.firstview_content').toggleClass('firstview_about');
             });
             $('#top_works_button').hover(
               function(){
-                  $('.firstview_content').toggleClass('firstview_disapear');
-                  console.log("動いてるで");
+                  $('.firstview_content').toggleClass('firstview_works');
             });
         });
 
         var post_sectionID = "firstview";
 
         function sectionChange(section_id){
+          if(section_id == "firstview" && post_sectionID == "firstview"){
+            return null;  
+          }
           var sectionID = section_id;
           var appear_section = document.getElementById(sectionID);
           var disappear_section = document.getElementById(post_sectionID);
           appear_section.style.display = "flex";
+          appear_section.style.opacity = 1;
           disappear_section.style.display = "none";
           post_sectionID = sectionID;
         }
@@ -92,9 +94,9 @@
        </div>
      </div>
      <nav>
-         <a href="#">Top</a>
-         <a href="#about">About</a>
-         <a href="#works" onclick="buttonChange('works_first')">Works</a>
+         <p onclick="sectionChange('firstview')">Top</p>
+         <p onclick="sectionChange('about')">About</p>
+         <p onclick="buttonChange('works_first') sectionChange('works')">Works</p>
      </nav>
    </header>
 
