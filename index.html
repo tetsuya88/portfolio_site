@@ -59,16 +59,15 @@
         var post_sectionID = "firstview";
 
         function sectionChange(section_id){
-          if(section_id == "firstview" && post_sectionID == "firstview"){
-            return null;  
-          }
-          var sectionID = section_id;
-          var appear_section = document.getElementById(sectionID);
-          var disappear_section = document.getElementById(post_sectionID);
-          appear_section.style.display = "flex";
-          appear_section.style.opacity = 1;
-          disappear_section.style.display = "none";
-          post_sectionID = sectionID;
+            if(section_id == post_sectionID){
+                return null;
+            }
+            var sectionID = section_id;
+            var appear_section = document.getElementById(sectionID);
+            var disappear_section = document.getElementById(post_sectionID);
+            appear_section.style.display = "flex";
+            disappear_section.style.display = "none";
+            post_sectionID = sectionID;
         }
 
         var post_target_id = "works_first";
@@ -96,13 +95,13 @@
      <nav>
          <p onclick="sectionChange('firstview')">Top</p>
          <p onclick="sectionChange('about')">About</p>
-         <p onclick="buttonChange('works_first') sectionChange('works')">Works</p>
+         <p onclick="sectionChange('works')">Works</p>
      </nav>
    </header>
 
    <main role="main">
         <div id="firstview">
-           <div id="firstview-title">
+           <div class="firstview_title">
                 <div id="title_button">
                     <h1>TETSUYA YAMAURA</h1>
                     <p class="job">Web/App Designer/Engineer</p>
@@ -136,7 +135,7 @@
                   </div>
                   <div class="contents" id="introduction">
                       <h1>Introduction</h1>
-                      <p>主な学習スキルは映像編集とプログラミング。MV・ショートムービーの制作を5年ほど行う。SwiftやJavascriptでのソフトウェア開発のかたわら、現在はUnity、Three.js、React.jsを学習中。既存技術の新しい組み合わせを見つけ、プロジェクトに生かすことを心がけている。</p>
+                      <p>主な学習スキルは映像編集とプログラミング。MV・ショートムービーの制作を5年ほど行っています。SwiftやJavascriptでのソフトウェア開発のかたわら、現在はUnity、Three.js、React.jsを学習中。既存技術の新しい組み合わせを見つけ、プロジェクトに生かすことを心がけています。</p>
                   </div>
                   <div class="contents" id="hobby">
                      <h1>Hobby</h1>

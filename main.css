@@ -179,7 +179,7 @@ body{
     transition-duration:0.5s;
 }
 
-#firstview-title{
+.firstview_title{
     position: relative;
     display: flex;
     align-items: center;
@@ -187,6 +187,8 @@ body{
     height:100vh;
     opacity: 1;
     color: #232323;
+    transition-property: width;
+    transition-duration: 1s;
     animation: fadeIn 2.5s ease 0.5s 1 backwards;
     -webkit-animation: fadeIn 2.5s ease 0.5s 1 backwards;
 }
@@ -279,7 +281,7 @@ body{
     width:38.2%;
     height: 100vh;
     background-color: #a5a430;
-    transition-property: background-color;
+    transition-property: background-color,height;
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
     animation: slideDown 0.5s ease 1.5s 1 backwards;
@@ -292,6 +294,10 @@ body{
 
 .firstview_works{
   background-color: #cd5b4b;
+}
+
+.firstview_content_disappear{
+  height: 0;
 }
 
 
@@ -311,6 +317,8 @@ body{
     transition-property:opacity;
     transition-timing-function:ease-in-out;
     transition-duration:0.5s;
+    animation: fadeIn 2.5s ease 0.5s 1 backwards;
+    -webkit-animation: fadeIn 2.5s ease 0.5s 1 backwards;
 }
 
 #left_content{
@@ -329,6 +337,7 @@ body{
     text-align: left;
     margin-right: 90%;
     margin-bottom: 10px;
+
 }
 
 #left_content .contents{
@@ -466,12 +475,10 @@ body{
     background-color: #cd5b4b;
     height: 100vh;
     width: 100%;
-    opacity: 0;
     display: none;
     flex-wrap: nowrap;
-    transition-property:opacity;
-    transition-timing-function:ease-in-out;
-    transition-duration:0.5s;
+    animation: fadeIn 2.5s ease 0.5s 1 backwards;
+    -webkit-animation: fadeIn 2.5s ease 0.5s 1 backwards;
 }
 
 #works_button{
@@ -856,7 +863,7 @@ body{
         height: 100%;
     }
 
-    .firstview-title{
+    .firstview_title{
         position: relative;
         width: 290px;
         height: 270px;
