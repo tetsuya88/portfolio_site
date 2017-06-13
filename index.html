@@ -56,29 +56,52 @@
             });
         });
 
-        var post_sectionID = "firstview";
+        var now_sectionClass = "firstview";
+        var sectionClass = "";
 
-        function sectionChange(section_id){
-            if(section_id == post_sectionID){
+
+        function sectionChange(section_class){
+            sectionClass = section_class;
+            console.log(section_class);
+            console.log(now_sectionClass);
+
+            if(section_class == now_sectionClass){
                 return null;
             }
-            var sectionID = section_id;
-            var appear_section = document.getElementById(sectionID);
-            var disappear_section = document.getElementById(post_sectionID);
-            appear_section.style.display = "flex";
-            disappear_section.style.display = "none";
-            post_sectionID = sectionID;
+
+            if (section_class == "about"){
+                document.body.style.background = "#f6e8aa";
+            }else if (section_class == "works") {
+                document.body.style.background = "#cd5b4b";
+            }else{
+                document.body.style.background = "#fff";
+            }
+
+            var removeSection = "." + now_sectionClass;
+            var visibleSection = "." + section_class;
+
+            $(function(){
+                $(removeSection).addClass('disappear');
+                $(visibleSection).removeClass('disappear');
+            });
+
+            now_sectionClass = sectionClass;
         }
 
-        var post_target_id = "works_first";
+        function displayChange (section,mode){
+          var sectionDOM = document.getElementsByClassName(section);
+          sectionDOM[0].style.display = mode;
+        }
+
+        var post_works_id = "works_first";
 
         function buttonChange(id){
             var selectedID = id;
-            var view_target = document.getElementById(selectedID);
-            var post_target = document.getElementById(post_target_id);
-            post_target.style.display = "none";
-            view_target.style.display = "block";
-            post_target_id = selectedID;
+            var view_works = document.getElementById(selectedID);
+            var post_works = document.getElementById(post_target_id);
+            post_works.style.display = "none";
+            view_works.style.display = "block";
+            post_works_id = selectedID;
         }
     </script>
 </head>
@@ -99,8 +122,8 @@
      </nav>
    </header>
 
-   <main role="main">
-        <div id="firstview">
+   <main id="main">
+        <div class="firstview">
            <div class="firstview_title">
                 <div id="title_button">
                     <h1>TETSUYA YAMAURA</h1>
@@ -115,7 +138,7 @@
         </div>
 
         <!-- About -->
-        <section id="about">
+        <section class="about disappear">
              <div id="left_content">
                   <div class="contents" id="life">
                       <h1>Life</h1>
@@ -230,7 +253,7 @@
              </div>
         </section>
         <!-- 作品リンク -->
-        <section id="works">
+        <section class="works disappear">
             <section id="works_button">
                 <nav class="genre_link">
 

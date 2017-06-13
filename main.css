@@ -54,8 +54,8 @@ html{
 
 body{
     text-align: center;
-    background-color:#ffffff;
-    font-family:Helvetica, Avenir , "Open Sans" , "游ゴシック","Helvetica Neue" , Arial , Verdana , Roboto  , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+    background-color:#fff;
+    font-family:Helvetica,"Helvetica Neue" , Avenir , "Open Sans" , "游ゴシック", Arial , Verdana , Roboto  , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
     margin: 0;
     width:100vw;
     height: 100%;
@@ -166,7 +166,7 @@ body{
 
 /* ファストビューのスタイル */
 
-#firstview{
+.firstview{
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -176,7 +176,7 @@ body{
     z-index: 10000;
     transition-property:opacity;
     transition-timing-function:ease-in-out;
-    transition-duration:0.5s;
+    transition-duration: 1s;
 }
 
 .firstview_title{
@@ -208,7 +208,7 @@ body{
 
 }
 
-#firstview h1{
+.firstview h1{
     text-align: left;
     width: 100%;
     margin-bottom: 5px;
@@ -303,20 +303,20 @@ body{
 
 /* 自己紹介のスタイル */
 
-#about{
+.about{
     position: absolute;
     background:#f6e8aa;
     width: 100%;
     height: 100vh;
     min-height: 750px;
-    display: none;
+    display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-content: center;
     z-index: 5000;
     transition-property:opacity;
     transition-timing-function:ease-in-out;
-    transition-duration:0.5s;
+    transition-duration: 1s;
     animation: fadeIn 2.5s ease 0.5s 1 backwards;
     -webkit-animation: fadeIn 2.5s ease 0.5s 1 backwards;
 }
@@ -467,16 +467,18 @@ body{
     margin: 10px;
 }
 
-
 /* 作品紹介のスタイル */
 
-#works{
+.works{
     z-index: 1000;
     background-color: #cd5b4b;
     height: 100vh;
     width: 100%;
-    display: none;
+    display: flex;
     flex-wrap: nowrap;
+    transition-property:opacity;
+    transition-timing-function:ease-in-out;
+    transition-duration:1s;
     animation: fadeIn 2.5s ease 0.5s 1 backwards;
     -webkit-animation: fadeIn 2.5s ease 0.5s 1 backwards;
 }
@@ -700,7 +702,10 @@ body{
     height: 100%;
 }
 
-
+.disappear{
+  opacity: 0;
+  transition-delay:0.5s;
+}
 
 /* 各作品のページのスタイル */
 
