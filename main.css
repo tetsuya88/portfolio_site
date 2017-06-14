@@ -82,7 +82,7 @@ body{
   display: block;
   position: absolute;
   width: 100%;
-  border-bottom: solid 3px #232323;
+  border-bottom: solid 3px #414F20;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 
@@ -142,7 +142,7 @@ body{
   transform: translateX(20px);
 }
 
-.header_bar p{
+.header_bar a{
   display: inline-block;
   margin: 0 30px 0 30px;
   text-decoration: none;
@@ -150,15 +150,15 @@ body{
   cursor: pointer;
   transform: scale(1);
   -webkit-transform: scale(1);
-  color: rgba(143, 143, 143, 0.8);
+  color: rgba(65,79,32,0.6);
   transition-property: transform, color;
   transition-timing-function:ease-in-out;
   transition-duration:0.3s;
 }
 
-.header_bar p:hover{
+.header_bar a:hover{
   transform: scale(1.3);
-  color: rgba(0, 0, 0, 1);
+  color: #414F20;
 }
 
 
@@ -167,54 +167,33 @@ body{
 /* ファストビューのスタイル */
 
 .firstview{
-    position: absolute;
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-wrap: nowrap;
     background: #fff;
-    z-index: 10000;
     transition-property:opacity;
     transition-timing-function:ease-in-out;
     transition-duration: 1s;
 }
 
 .firstview_title{
+    float: left;
+    top: 40vh;
+    left: 10vw;
     position: relative;
-    display: flex;
-    align-items: center;
-    width: 61.8%;
-    height:100vh;
     opacity: 1;
-    color: #232323;
-    transition-property: width;
+    color: #414F20;
     transition-duration: 1s;
     animation: fadeIn 2.5s ease 0.5s 1 backwards;
     -webkit-animation: fadeIn 2.5s ease 0.5s 1 backwards;
-}
-
-#title_button{
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
-
-    width: 50%;
-    min-width: 422px;
-    max-width: 467px;
-    height:400px;
-
 }
 
 .firstview h1{
     text-align: left;
     width: 100%;
     margin-bottom: 5px;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: normal;
-    letter-spacing:4px;
+    letter-spacing: 15px;
 }
 
 .job{
@@ -224,96 +203,18 @@ body{
     margin-bottom: 120px;
     font-weight: 300;
     font-size: 15px;
-    letter-spacing:3px;
+    letter-spacing:5px;
 }
-
-
-.link_button{
-    display: block;
-    position: relative;
-    margin-top: 30px;
-    width: 200px;
-    height: 200px;
-
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-
-    transform: scale(1);
-    transition-property:transform,background-color,background-image;
-    transition-timing-function:ease-in-out;
-    transition-duration:0.3s;
-    animation: scaleUp 1s ease 1.5s 1 backwards;
-    -webkit-animation: scaleUp 1s ease 2s 1 backwards;
-}
-
-.link_button:hover{
-  transform: scale(1.1);
-}
-
-#top_about_button{
-  background-image: url("img/about_icon.svg");
-  background-position: center;
-  background-size: 100%;
-  background-color: #ffffff;
-}
-
-#top_about_button:hover{
-  background-color: #ead56b;
-  background-image: url("img/about_icon_hover.svg");
-}
-
-#top_works_button{
-  background-image: url("img/works_icon.svg");
-  background-position: center;
-  background-size: 100%;
-  background-color: #ffffff;
-}
-
-#top_works_button:hover{
-  background-color: #cd5b4b;
-  background-image: url("img/works_icon_hover.svg");
-}
-
-
-.firstview_content{
-    display:block;
-    width:38.2%;
-    height: 100vh;
-    background-color: #a5a430;
-    transition-property: background-color,height;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
-    animation: slideDown 0.5s ease 1.5s 1 backwards;
-    -webkit-animation: slideDown 0.5s ease 1.5s 1 backwards;
-}
-
-.firstview_about{
-  background-color: #f6e8aa;
-}
-
-.firstview_works{
-  background-color: #cd5b4b;
-}
-
-.firstview_content_disappear{
-  height: 0;
-}
-
 
 /* 自己紹介のスタイル */
 
 .about{
-    position: absolute;
-    background:#f6e8aa;
+    background:#AACF53;
     width: 100%;
     height: 100vh;
-    min-height: 750px;
     display: flex;
-    flex-wrap: nowrap;
+    align-items: center;
     justify-content: center;
-    align-content: center;
-    z-index: 5000;
     transition-property:opacity;
     transition-timing-function:ease-in-out;
     transition-duration: 1s;
@@ -321,141 +222,58 @@ body{
     -webkit-animation: fadeIn 2.5s ease 0.5s 1 backwards;
 }
 
-#left_content{
-    position: relative;
-    width: 61.8%;
-    height: 95%;
-    padding-top: 5%;
-    display:flex;
-    flex-wrap: wrap;
-    align-content: center;
+.about_box{
+  width: 100%;
+  height: auto;
 }
 
-#left_content h1{
-    font-size: 24px;
-    font-weight: 200;
-    text-align: left;
-    margin-right: 90%;
-    margin-bottom: 10px;
-
+.about_box h1{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
-#left_content .contents{
-    width: 75%;
-    margin: 20px auto;
-    font-size: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    text-align: left;
+.about_box h2{
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px auto;
 }
 
-.history{
-    width: 600px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items:baseline;
-    justify-content: flex-start;
+.portrait{
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  margin-top: 35px;
 }
 
-.history span{
-    display: block;
-    margin: 8px;
-    margin-right: 30px;
-    margin-left:0;
-}
-
-#introduction p{
-    width: 100%;
-    max-width: 650px;
-}
-
-#hobby{
-    width: 75%;
-    min-width: 480px;
-    margin: 20px auto;
-    font-size: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    text-align: left;
-}
-
-.interest{
-    text-align: center;
-    font-size:15px;
-    margin: 8px;
-    margin-right: 10px;
-}
-
-
-#right_content{
-    position: relative;
-    width: 38.2%;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    background:#f6e8aa;
-}
-
-#right_content h1{
-    margin-left: 35%;
-    margin-right: 35%;
-    font-size: 24px;
-    margin-top: 30px;
-    font-weight: 200;
-}
-
-#portrait{
-    margin-left: 35%;
-    margin-right: 35%;
-    width: 180px;
-    height: 180px;
-    margin:10px auto;
-    border: solid 8px;
-    border-color: #ffffff;
-}
-
-#name_and_contact{
-    margin-left: 35%;
-    margin-right: 35%;
+.name_and_contact{
+    margin: 0 auto;
     width: 140px;
-    height: 100px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
     justify-content: space-around;
 }
 
-#name_and_contact h1{
-    margin: 0 auto;
-    width: 140px;
-    font-size: 24px;
-    font-weight: 100;
-}
-
-#name_and_contact span{
+.name_and_contact span{
     margin: 0 auto;
     width: 140px;
     font-size: 18px;
     font-weight: 200;
 }
 
-#name_and_contact img{
+.name_and_contact img{
     width:25px;
     height: 25px;
     margin:10px;
 }
 
-#skill_icons{
-    margin: 0 auto;
-    width: 75%;
-    max-width: 390px;
+.skill_icons{
+    margin: 20px auto;
+    width: 80%;
     min-width: 350px;
-    height: 300px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -467,15 +285,49 @@ body{
     margin: 10px;
 }
 
+.introduction{
+    margin: 20px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.hobby{
+  width: 40%;
+  min-width: 350px;
+  margin: 30px auto;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+.interests{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.interest{
+    text-align: center;
+    font-size:12px;
+    margin: 8px;
+}
+
+.interest img{
+  height: 50px;
+  width: auto;
+  margin: 5px;
+}
+
 /* 作品紹介のスタイル */
 
 .works{
     z-index: 1000;
-    background-color: #cd5b4b;
+    background-color: #C4D797;
     height: 100vh;
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
     transition-property:opacity;
     transition-timing-function:ease-in-out;
     transition-duration:1s;
@@ -483,21 +335,10 @@ body{
     -webkit-animation: fadeIn 2.5s ease 0.5s 1 backwards;
 }
 
-#works_button{
-    width: 61.8%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.5);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-
 .genre_link{
-    width:750px;
+    width: 80%;
+    max-width:750px;
     height: 475px;
-    padding-top: 5vh;
 }
 
 .works_genre{
@@ -569,7 +410,7 @@ body{
 /* リンクボタンのCSS */
 
 .article_link{
-  background: #cd5b4b;
+  background: #809C3F;
   text-align: center;
   color: #fff;
   transition-property:transform;
@@ -632,14 +473,14 @@ body{
 }
 
 .article_link p{
-  margin-top: 27%;
+  margin-top: 29%;
   padding: 0.5em 2em;
   text-indent: 0;
   white-space: normal;
   overflow: visible;
 	text-transform: none;
-  font-weight: bold;
-  font-size: 15px;
+  font-weight: normal;
+  font-size: 14px;
 	opacity: 0;
 	-webkit-transform: translate3d(0,-10px,0);
 	transform: translate3d(0,-10px,0);
@@ -681,7 +522,6 @@ body{
 	transition-delay: 0.15s;
 }
 
-
 #back_link{
   width: 160px;
   height: 60px;
@@ -691,20 +531,10 @@ body{
   text-indent: 0;
   text-decoration: none;
   white-space: normal;
-  color: #232323;
+  color: #414F20;
   font-size: 14px;
   z-index: 100;
-  background-color: rgba(255,255,255,0.5);
-}
-
-#detail_view{
-    width: 38.2%;
-    height: 100%;
-}
-
-.disappear{
-  opacity: 0;
-  transition-delay:0.5s;
+  background-color: #fff;
 }
 
 /* 各作品のページのスタイル */

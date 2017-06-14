@@ -45,60 +45,12 @@
             });
         });
 
-        $(function(){
-            $('#top_about_button').hover(
-              function(){
-                  $('.firstview_content').toggleClass('firstview_about');
-            });
-            $('#top_works_button').hover(
-              function(){
-                  $('.firstview_content').toggleClass('firstview_works');
-            });
-        });
-
-        var now_sectionClass = "firstview";
-        var sectionClass = "";
-
-
-        function sectionChange(section_class){
-            sectionClass = section_class;
-            console.log(section_class);
-            console.log(now_sectionClass);
-
-            if(section_class == now_sectionClass){
-                return null;
-            }
-
-            if (section_class == "about"){
-                document.body.style.background = "#f6e8aa";
-            }else if (section_class == "works") {
-                document.body.style.background = "#cd5b4b";
-            }else{
-                document.body.style.background = "#fff";
-            }
-
-            var removeSection = "." + now_sectionClass;
-            var visibleSection = "." + section_class;
-
-            $(function(){
-                $(removeSection).addClass('disappear');
-                $(visibleSection).removeClass('disappear');
-            });
-
-            now_sectionClass = sectionClass;
-        }
-
-        function displayChange (section,mode){
-          var sectionDOM = document.getElementsByClassName(section);
-          sectionDOM[0].style.display = mode;
-        }
-
         var post_works_id = "works_first";
 
         function buttonChange(id){
             var selectedID = id;
             var view_works = document.getElementById(selectedID);
-            var post_works = document.getElementById(post_target_id);
+            var post_works = document.getElementById(post_works_id);
             post_works.style.display = "none";
             view_works.style.display = "block";
             post_works_id = selectedID;
@@ -116,288 +68,246 @@
        </div>
      </div>
      <nav>
-         <p onclick="sectionChange('firstview')">Top</p>
-         <p onclick="sectionChange('about')">About</p>
-         <p onclick="sectionChange('works')">Works</p>
+         <a href="#">Top</a>
+         <a href="#about">About</a>
+         <a href="#works">Works</a>
      </nav>
    </header>
 
    <main id="main">
-        <div class="firstview">
-           <div class="firstview_title">
-                <div id="title_button">
-                    <h1>TETSUYA YAMAURA</h1>
-                    <p class="job">Web/App Designer/Engineer</p>
-                    <a class="link_button" id="top_about_button" href="#about" title="自己紹介です" onclick="sectionChange('about')">About</a>
-                    <a class="link_button" id="top_works_button" href="#works" title="作品紹介です"onclick="sectionChange('works')">Works</a>
-                </div>
-
-           </div>
-           <div class="firstview_content">
-           </div>
-        </div>
+        <section class="firstview">
+          <div class="firstview_title">
+            <h1>TETSUYA YAMAURA</h1>
+            <p class="job">Web/App Designer/Engineer</p>
+          </div>
+        </section>
 
         <!-- About -->
-        <section class="about disappear">
-             <div id="left_content">
-                  <div class="contents" id="life">
-                      <h1>Life</h1>
-                      <div class="history">
-                          <span id="year">1994</span><span>長野県南佐久郡佐久穂町に生まれる。</span>
-                      </div>
-                      <div class="history">
-                          <span id="year">2009</span><span>長野県野沢北高校に進学。ゲーム開発・デザインに興味を抱く。</span>
-                      </div>
-                      <div class="history">
-                          <span id="year">2013</span><span>首都大学東京システムデザイン学部<br/>インダストリアルアートコースに進学。</span>
-                      </div>
-                      <div class="history">
-                          <span id="year">2017</span><span>同大学院ネットワークデザインスタジオに進学。</span>
-                      </div>
-
-                  </div>
-                  <div class="contents" id="introduction">
-                      <h1>Introduction</h1>
-                      <p>主な学習スキルは映像編集とプログラミング。MV・ショートムービーの制作を5年ほど行っています。SwiftやJavascriptでのソフトウェア開発のかたわら、現在はUnity、Three.js、React.jsを学習中。既存技術の新しい組み合わせを見つけ、プロジェクトに生かすことを心がけています。</p>
-                  </div>
-                  <div class="contents" id="hobby">
-                     <h1>Hobby</h1>
-                     <div class="interest">
-                           <p>バイク</p>
-                           <img src="img/hobby/moto.svg" alt="motorcycle" style="width:65px;height:65px;margin:5px;">
-                     </div>
-                     <div class="interest">
-                           <p>自転車</p>
-                           <img src="img/hobby/bike.svg" alt="roadbike" style="width:65px;height:65px;margin:5px;">
-                     </div>
-                     <div class="interest">
-                           <p>ゲーム</p>
-                           <img src="img/hobby/game.svg" alt="Game" style="width:65px;height:65px;margin:5px;">
-                     </div>
-                     <div class="interest">
-                           <p>映画鑑賞</p>
-                           <img src="img/hobby/cinema.svg" alt="cinema" style="width:65px;height:65px;margin:5px;">
-                     </div>
-                     <div class="interest">
-                           <p>料理</p>
-                           <img src="img/hobby/cook.svg" alt="cooking" style="width:65px;height:65px;margin:5px;">
-                     </div>
-                  </div>
-             </div>
-
-             <div id="right_content">
-                  <div id="portrait">
-                      <img src="img/portrait.jpg" alt="Tetsuya Yamaura" style="width:100%;height:100%;">
-                  </div>
-                   <div id="name_and_contact">
-                        <h1>山浦 徹也</h1>
-                        <span>Yamaura Tetsuya</span>
-                        <a href="#"><img src="img/mail.png" alt="mail" style="width:25px;
-                    height: 25px;"/></a>
-                        <a href="https://www.facebook.com/profile.php?id=100006810196384"><img src="img/facebook.png" alt="facebook"  style="width:25px;
-                    height: 25px;"/></a>
-                        <a href="https://github.com/tetsuya88"><img src="img/github.png" alt="Github" style="width:25px;
-                    height: 25px;"/></a>
-                    </div>
-                    <h1>Skill</h1>
-                    <div id="skill_icons">
-                        <div class="skill">
-                            <img src="img/skill/skill_photoshop.svg" alt="Photoshop" style="width:50px;height:50px;margin:5px;">
-                            <p>Photoshop</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_illustrator.svg" alt="Illustrator" style="width:50px;height:50px;margin:5px;">
-                            <p>Illustrator</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_premiere.svg" alt="Premiere" style="width:50px;height:50px;margin:5px;">
-                            <p>Premiere</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_aftereffects.svg" alt="After Effects" style="width:50px;height:50px;margin:5px;">
-                            <p>After Effects</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_unity.svg" alt="Unity C#" style="width:45px;height:45px;margin:5px;">
-                            <p>C#</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_swift.svg" alt="Swift3" style="width:50px;height:50px;margin:5px;">
-                            <p>Swift</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_sketch.svg" alt="Sketch" style="width:50px;height:50px;margin:5px;">
-                            <p>Sketch</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_of.svg" alt="Openframeworks C++" style="width:50px;height:50px;margin:5px;">
-                            <p>C++</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_html.svg" alt="HTML5" style="width:50px;height:50px;margin:5px;">
-                            <p>HTML</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_css.svg" alt="CSS" style="width:50px;height:50px;margin:5px;">
-                            <p>CSS</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_js.svg" alt="javascript" style="width:50px;height:50px;margin:5px;">
-                            <p>Javascript</p>
-                        </div>
-                        <div class="skill">
-                            <img src="img/skill/skill_arduino.svg" alt="Arduino" style="width:50px;height:50px;margin:5px;">
-                            <p>Arduino</p>
-                        </div>
-                    </div>
-             </div>
+        <section class="about" id="about">
+          <div class="about_box">
+            <img class="portrait" src="img/portrait.jpg" alt="Tetsuya Yamaura">
+            <section class="name_and_contact">
+              <h1>山浦 徹也</h1>
+              <span>Yamaura Tetsuya</span>
+              <a href="#"><img src="img/mail.png" alt="mail" style="width:25px;
+                        height: 25px;"/></a>
+              <a href="https://www.facebook.com/profile.php?id=100006810196384"><img src="img/facebook.png" alt="facebook"  style="width:25px;
+                        height: 25px;"/></a>
+              <a href="https://github.com/tetsuya88"><img src="img/github.png" alt="Github" style="width:25px;
+                        height: 25px;"/></a>
+            </section>
+            <section class="skill_icons">
+              <div class="skill">
+                <img src="img/skill/skill_photoshop.svg" alt="Photoshop" style="width:50px;height:50px;margin:5px;">
+                <p>Photoshop</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_illustrator.svg" alt="Illustrator" style="width:50px;height:50px;margin:5px;">
+                <p>Illustrator</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_premiere.svg" alt="Premiere" style="width:50px;height:50px;margin:5px;">
+                <p>Premiere</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_aftereffects.svg" alt="After Effects" style="width:50px;height:50px;margin:5px;">
+                <p>After Effects</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_unity.svg" alt="Unity C#" style="width:45px;height:45px;margin:5px;">
+                <p>C#</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_swift.svg" alt="Swift3" style="width:50px;height:50px;margin:5px;">
+                <p>Swift</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_sketch.svg" alt="Sketch" style="width:50px;height:50px;margin:5px;">
+                <p>Sketch</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_of.svg" alt="Openframeworks C++" style="width:50px;height:50px;margin:5px;">
+                <p>C++</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_html.svg" alt="HTML5" style="width:50px;height:50px;margin:5px;">
+                <p>HTML</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_css.svg" alt="CSS" style="width:50px;height:50px;margin:5px;">
+                <p>CSS</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_js.svg" alt="javascript" style="width:50px;height:50px;margin:5px;">
+                <p>Javascript</p>
+              </div>
+              <div class="skill">
+                <img src="img/skill/skill_arduino.svg" alt="Arduino" style="width:50px;height:50px;margin:5px;">
+                <p>Arduino</p>
+              </div>
+            </section>
+            <p class="introduction">
+              映像・プログラミングの独学と合わせて、研究室では情報デザインを学んでいます。ソフトウェア面では主にSwift3、JavaScriptによる開発を行い、現在はUnityをラーニング中です。ハードウェア面では、Aruduinoによる電子工作にも挑戦しています。
+            </p>
+            <section class="hobby">
+              <h2>Hobby</h2>
+              <div class = "interests">
+                <div class="interest">
+                  <img src="img/hobby/moto.svg" alt="motorcycle">
+                  <p>バイク</p>
+                </div>
+                <div class="interest">
+                  <img src="img/hobby/bike.svg" alt="roadbike">
+                  <p>自転車</p>
+                </div>
+                <div class="interest">
+                  <img src="img/hobby/game.svg" alt="Game">
+                  <p>ゲーム</p>
+                </div>
+                <div class="interest">
+                  <img src="img/hobby/cinema.svg" alt="cinema">
+                  <p>映画鑑賞</p>
+                </div>
+                <div class="interest">
+                  <img src="img/hobby/cook.svg" alt="cooking">
+                  <p>料理</p>
+                </div>
+              </div>
+            </section>
+          </div>
         </section>
         <!-- 作品リンク -->
-        <section class="works disappear">
-            <section id="works_button">
-                <nav class="genre_link">
-
-                    <ul class="works_genre" id="works_first" style="display:block;">
-                        <il id="web" class="genre" href="#" title="Webの作品です。" onclick="buttonChange('works_web')">Web</il>
-                        <il id="interact" class="genre" href="#" title="インタラクション作品です。"onclick="buttonChange('works_interact')">Interaction</il>
-                        <il id="movie" class="genre" href="#" title="映像作品です。"onclick="buttonChange('works_movie')">Movie</il>
-                        <il id="app" class="genre" href="#" title="アプリケーションの作品です。"onclick="buttonChange('works_app')">Application</il>
-                        <il id="graphics" class="genre" href="#" title="グラフィック作品です。"onclick="buttonChange('works_graphics')">Graphics</il>
-                        <il id="hardware" class="genre" href="#" title="製品や端末の作品です。"onclick="buttonChange('works_hardware')">Hardware</il>
-                    </ul>
-
-                    <ul class="works_genre" id="works_web" style="display:none;">
-                        <il class="genre article_link">
-                            <img src="./img/works/web_iagw2017/background.png" alt="ia graduation site" style="position:relative;right:110px;">
-                            <div>
-                              <p>2017年<br>卒業・修了制作展<br>広報サイト</p>
-                              <a href="./article/web_iagw2017.html">ia graduation site</a>
-                            </div>
-                        </il>
-                        <il class="genre article_link">
-                            <img src="" alt="">
-                            <div>
-                              <p>日野市<br>子どもカレンダー<br>「ぽかぽか」</p>
-                              <a href="#">日野市子どもカレンダー「ぽかぽか」</a>
-                            </div>
-                        </il>
-                        <il>
-                            <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
-                        </il>
-                    </ul>
-
-                    <ul class="works_genre" id="works_interact" style="display:none;">
-                        <il class="genre article_link">
-                          <img src="" alt="">
-                          <div>
-                            <p><br>YabaCoin<br>System</p>
-                            <a href="#">YabaCoin System</a>
-                          </div>
-                        </il>
-                        <il>
-                            <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
-                        </il>
-                    </ul>
-
-
-                    <ul class="works_genre" id="works_movie" style="display:none;">
-                        <il class="genre article_link">
-                          <div>
-                            <p><br>Mikutoronica</p>
-                            <a href="#">Mikutoronica</a>
-                          </div>
-                        </il>
-                        <il class="genre article_link">
-                          <img src="" alt="">
-                          <div>
-                            <p><br>Nishiyama<br>hazard</p>
-                            <a href="#">Nishiyama hazard</a>
-                          </div>
-                        </il>
-                        <il class="genre article_link">
-                          <img src="" alt="">
-                          <div>
-                            <p><br>Teaser</p>
-                            <a href="#">Teaser</a>
-                          </div>
-                        </il>
-                        <il class="genre article_link">
-                          <img src="" alt="">
-                          <div>
-                            <p><br>拝啓・敬具</p>
-                            <a href="#">拝啓・敬具</a>
-                          </div>
-                        </il>
-                        <il class="genre article_link">
-                          <img src="" alt="">
-                          <div>
-                            <p><br>大人と子ども</p>
-                            <a href="#">大人と子ども</a>
-                          </div>
-                        </il>
-                        <il>
-                            <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
-                        </il>
-                    </ul>
-
-                    <ul class="works_genre" id="works_app" style="display:none;">
-                        <il class="genre article_link">
-                          <img src="" alt="">
-                          <div>
-                            <p><br>ekicompo<br>駅コンポ</p>
-                            <a href="#">ekicompo</a>
-                          </div>
-                        </il>
-                        <il>
-                            <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
-                        </il>
-                    </ul>
-
-                    <ul class="works_genre" id="works_graphics" style="display:none;">
-                        <il class="genre article_link">
-                          <img src="" alt="">
-                          <div>
-                            <p><br>ブックカバー<br>デザイン</p>
-                            <a href="#">book cover</a>
-                          </div>
-                        </il>
-                        <il class="genre article_link">
-                          <img src="" alt="">
-                          <div>
-                            <p><br>名刺デザイン</p>
-                            <a href="#">名刺</a>
-                          </div>
-                        </il>
-                        <il class="genre article_link">
-                          <img src="" alt="">
-                          <div>
-                            <p><br>サークル<br>新歓ポスター</p>
-                            <a href="#">サークル新歓ポスター</a>
-                          </div>
-                        </il>
-                        <il>
-                            <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
-                        </il>
-                    </ul>
-
-                    <ul class="works_genre" id="works_hardware" style="display:none;">
-                        <il class="genre article_link">
-                          <img src="" alt="">
-                          <div>
-                            <p>The<br>Useless<br>Arduino</p>
-                            <a href="#">The Useless Arduino</a>
-                          </div>
-                        </il>
-                        <il>
-                            <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
-                        </il>
-                    </ul>
-
-                </nav>
-            </section>
-            <section id="detail_view">
-
-            </section>
+        <section class="works" id="works">
+          <nav class="genre_link">
+            <ul class="works_genre" id="works_first" style="display:block;">
+              <il id="web" class="genre" href="#" title="Webの作品です。" onclick="buttonChange('works_web')">Web</il>
+              <il id="interact" class="genre" href="#" title="インタラクション作品です。"onclick="buttonChange('works_interact')">Interaction</il>
+              <il id="movie" class="genre" href="#" title="映像作品です。"onclick="buttonChange('works_movie')">Movie</il>
+              <il id="app" class="genre" href="#" title="アプリケーションの作品です。"onclick="buttonChange('works_app')">Application</il>
+              <il id="graphics" class="genre" href="#" title="グラフィック作品です。"onclick="buttonChange('works_graphics')">Graphics</il>
+              <il id="hardware" class="genre" href="#" title="製品や端末の作品です。"onclick="buttonChange('works_hardware')">Hardware</il>
+            </ul>
+            <ul class="works_genre" id="works_web" style="display:none;">
+              <il class="genre article_link">
+                <img src="./img/works/web_iagw2017/background.png" alt="ia graduation site" style="position:relative;right:110px;">
+                <div>
+                  <p>2017年<br>卒業・修了制作展<br>広報サイト</p>
+                  <a href="./article/web_iagw2017.html">ia graduation site</a>
+                </div>
+              </il>
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p>日野市<br>子どもカレンダー<br>「ぽかぽか」</p>
+                  <a href="#">日野市子どもカレンダー「ぽかぽか」</a>
+                </div>
+              </il>
+              <il>
+                <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
+              </il>
+            </ul>
+            <ul class="works_genre" id="works_interact" style="display:none;">
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p><br>YabaCoin<br>System</p>
+                  <a href="#">YabaCoin System</a>
+                </div>
+              </il>
+              <il>
+                <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
+              </il>
+            </ul>
+            <ul class="works_genre" id="works_movie" style="display:none;">
+              <il class="genre article_link">
+                <div>
+                  <p><br>Mikutoronica</p>
+                  <a href="#">Mikutoronica</a>
+                </div>
+              </il>
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p><br>Nishiyama<br>hazard</p>
+                  <a href="#">Nishiyama hazard</a>
+                </div>
+              </il>
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p><br>Teaser</p>
+                  <a href="#">Teaser</a>
+                </div>
+              </il>
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p><br>拝啓・敬具</p>
+                  <a href="#">拝啓・敬具</a>
+                </div>
+              </il>
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p><br>大人と子ども</p>
+                  <a href="#">大人と子ども</a>
+                </div>
+              </il>
+              <il>
+                <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
+              </il>
+            </ul>
+            <ul class="works_genre" id="works_app" style="display:none;">
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p><br>ekicompo<br>駅コンポ</p>
+                  <a href="#">ekicompo</a>
+                </div>
+              </il>
+              <il>
+                <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
+              </il>
+            </ul>
+            <ul class="works_genre" id="works_graphics" style="display:none;">
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p><br>ブックカバー<br>デザイン</p>
+                  <a href="#">book cover</a>
+                </div>
+              </il>
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p><br>名刺デザイン</p>
+                  <a href="#">名刺</a>
+                </div>
+              </il>
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p><br>サークル<br>新歓ポスター</p>
+                  <a href="#">サークル新歓ポスター</a>
+                </div>
+              </il>
+              <il>
+                <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
+              </il>
+            </ul>
+            <ul class="works_genre" id="works_hardware" style="display:none;">
+              <il class="genre article_link">
+                <img src="" alt="">
+                <div>
+                  <p>The<br>Useless<br>Arduino</p>
+                  <a href="#">The Useless Arduino</a>
+                </div>
+              </il>
+              <il>
+                <p class="genre article_link" id="back_link" onclick="buttonChange('works_first')">戻る</p>
+              </il>
+            </ul>
+          </nav>
         </section>
 
         <footer id="footer">
