@@ -19,15 +19,26 @@ html{
     100% {opacity: 100}
 }
 
-/* ラインを描く */
-@keyframes linedraw {
+/* ラインを描く1 */
+@keyframes lineDraw1 {
   0% {width: 0}
   100% {width: 100%}
 }
 
-@-webkit-keyframes linedraw {
+@-webkit-keyframes lineDraw1 {
   0% {width: 0}
   100% {width: 100%}
+}
+
+/* ラインを描く2 */
+@keyframes lineDraw2 {
+  0% {height: 0}
+  100% {height: 100%}
+}
+
+@-webkit-keyframes lineDraw2 {
+  0% {height: 0}
+  100% {height: 100%}
 }
 
 /*拡大表示*/
@@ -217,31 +228,34 @@ body{
 
 .lines{
   position: absolute;
-  top: 75vh;
+  top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   z-index: 10000;
-}
-
-.lines span{
-  display: block;
-  position: absolute;
-  border-bottom: solid 3px #fff;
 }
 
 .lines span:nth-child(1){
   width: 100%;
-  top: 0;
-  
+  top: 80vh;
+  display: block;
+  position: absolute;
+  border-bottom: solid 2px #fff;
+
+  animation: lineDraw1 0.5s ease 1s 1 backwards;
+  -webkit-animation: lineDraw1 0.5s ease 1s 1 backwards;
 }
 
 .lines span:nth-child(2){
+  display: block;
+  position: absolute;
+  border-right: solid 2px #fff;
   top: 0;
-  width: 100%;
-  transform-origin: 80% 0;
+  height: 100%;
+  left: 90vw;
 
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  animation: lineDraw2 0.5s ease-in-out 1.5s 1 backwards;
+  -webkit-animation: lineDraw2 0.5s ease-in-out 1.5s 1 backwards;
 }
 
 /* - - - - - - - - - - */
