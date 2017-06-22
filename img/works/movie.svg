@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
     <title>movie</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <rect id="path-1" x="0" y="0" width="890" height="1024"></rect>
-    </defs>
+    <defs></defs>
     <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="works(ホバーしたらランダムで画像表示しよう)" transform="translate(-620.000000, -275.000000)">
-            <g id="Rectangle">
-                <use fill-opacity="0.5" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="889" height="1023"></rect>
+        <g id="Desktop-HD" transform="translate(-895.000000, -2154.000000)">
+            <g id="Group-5" transform="translate(0.000000, 1912.000000)" fill="#C4D797">
+                <rect id="Rectangle" x="0" y="0" width="1440" height="800"></rect>
             </g>
-            <g id="movie" transform="translate(620.000000, 275.000000)">
-                <rect id="Rectangle-2" stroke="#979797" x="0.5" y="0.5" width="199" height="199"></rect>
-                <text id="Movie" font-family="Helvetica" font-size="24" font-weight="normal" letter-spacing="1.44000006" fill="#232323">
-                    <tspan x="26" y="172">Movie</tspan>
-                </text>
-                <g transform="translate(56.000000, 54.000000)" id="Combined-Shape" fill-rule="nonzero" fill="#231815">
-                    <path d="M19.2184962,0.307931034 L67.7815038,0.307931034 C78.2583039,0.307931034 86.7514286,8.80105567 86.7514286,19.2778558 L86.7514286,37.7221442 L86.7514286,37.7221442 C86.7514286,48.1989443 78.2583039,56.692069 67.7815038,56.692069 L19.2184962,56.692069 C8.74169606,56.692069 0.248571429,48.1989443 0.248571429,37.7221442 L0.248571429,19.2778558 L0.248571429,19.2778558 C0.248571429,8.80105567 8.74169606,0.307931034 19.2184962,0.307931034 L19.2184962,0.307931034 Z M58.734812,28.5 L30.1752632,14.6955172 L30.1752632,42.3044828 L58.734812,28.5 Z"></path>
+            <g id="Group-7" transform="translate(345.000000, 2154.000000)">
+                <g id="movie" transform="translate(550.000000, 0.000000)">
+                    <rect id="Rectangle-2" fill="#FFFFFF" x="0" y="0" width="200" height="200"></rect>
+                    <text id="Movie" font-family="Helvetica" font-size="24" font-weight="normal" letter-spacing="1.44000006" fill="#414F20">
+                        <tspan x="64.5902342" y="171">Movie</tspan>
+                    </text>
+                    <g transform="translate(56.000000, 54.000000)" id="Combined-Shape" fill-rule="nonzero" fill="#414F20">
+                        <path d="M19.2184962,0.307931034 L67.7815038,0.307931034 C78.2583039,0.307931034 86.7514286,8.80105567 86.7514286,19.2778558 L86.7514286,37.7221442 L86.7514286,37.7221442 C86.7514286,48.1989443 78.2583039,56.692069 67.7815038,56.692069 L19.2184962,56.692069 L19.2184962,56.692069 C8.74169606,56.692069 0.248571429,48.1989443 0.248571429,37.7221442 L0.248571429,19.2778558 L0.248571429,19.2778558 C0.248571429,8.80105567 8.74169606,0.307931034 19.2184962,0.307931034 L19.2184962,0.307931034 Z M58.734812,28.5 L30.1752632,14.6955172 L30.1752632,42.3044828 L58.734812,28.5 Z"></path>
+                    </g>
                 </g>
             </g>
         </g>

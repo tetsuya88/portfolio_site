@@ -459,6 +459,7 @@ body{
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    cursor: pointer;
     transform: scale(1);
     transition-property:transform;
     transition-timing-function:ease-in-out;
