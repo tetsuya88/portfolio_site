@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>Tetsuya Yamaura</title>
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="./main.css">
     <link rel="shortcut icon" href="img/favicon.ico">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="./fademover.js"></script>
 
     <!-- 検索・OG・文責など -->
     <meta name="copyright" content="山浦徹也">
@@ -40,6 +40,7 @@
 
         //ハンバーガー処理
         $(function(){
+            $('body').fadeMover();
             $('#navToggle').click(function(){
                 $('header').toggleClass('openNav');
             });
@@ -201,7 +202,7 @@
                 <img src="" alt="">
                 <div>
                   <p>日野市<br>子どもカレンダー<br>「ぽかぽか」</p>
-                  <a href="#">日野市子どもカレンダー「ぽかぽか」</a>
+                  <a href="./article/web_pokapoka.html">日野市子どもカレンダー「ぽかぽか」</a>
                 </div>
               </il>
               <il>

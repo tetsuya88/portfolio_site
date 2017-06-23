@@ -509,7 +509,7 @@ body{
 /* リンクボタンのCSS */
 
 .article_link{
-  background: #809C3F;
+  background: #414F20;
   text-align: center;
   color: #fff;
   transition-property:transform;
@@ -525,6 +525,7 @@ body{
 	width: 100%;
 	height: 100%;
   text-indent: 100%;
+  z-index: 100000;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -535,7 +536,7 @@ body{
   width: auto;
   height: 200px;
   min-height: 100%;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .article_link div::before,
@@ -632,6 +633,39 @@ body{
   background-color: #fff;
 }
 
+
+.article .web_link{
+  display: block;
+  width: 10em;
+  height: 1.5em;
+  margin: 2.5em auto;
+  margin-bottom: 5em;
+  text-decoration: none;
+  color: #9b9c8e;
+  background-color: rgb(255, 255, 193);
+  text-align: center;
+
+}
+
+#footer{
+    float:right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: 20px;
+    text-align: right;
+    background-color: rgba(0,0,0,0);
+    font-size: 12px;
+    font-weight: 600;
+    color: #5C6A70;
+    z-index: 30000;
+}
+
+#footer p{
+    margin-right: 1em;
+}
+
 /* 各作品のページのスタイル */
 
 .modal_container{
@@ -671,10 +705,15 @@ body{
     background: url("img/back_button.svg");
     background-position: center;
     background-size: cover;
-
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    transition: ease-in-out 0.5s;
+}
+
+.back_button:hover{
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
 }
 
 .modal_container h1{
@@ -699,7 +738,7 @@ body{
 .information dl{
     padding: 5%;
     padding-bottom: calc(5% - 10px);
-    background-color: rgba(255,255,193,0.4);
+    background-color: rgba(170,207,83,0.7);
 }
 
 .information dt{
@@ -725,8 +764,9 @@ body{
 
 .article{
     display: inline-block;
-    padding-top: 30px;
-    width: 70%;
+    margin-top: 30px;
+    background-color: rgba(196, 215, 151, 0.7);
+    width: 65%;
     text-align: left;
 }
 
@@ -744,38 +784,6 @@ body{
     width: 100%;
     margin: 20px 0 20px;
     line-height: 2.5em;
-}
-
-.article .web_link{
-  display: block;
-  width: 10em;
-  height: 1.5em;
-  margin: 2.5em auto;
-  margin-bottom: 5em;
-  text-decoration: none;
-  color: #9b9c8e;
-  background-color: rgb(255, 255, 193);
-  text-align: center;
-
-}
-
-#footer{
-    float:right;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: auto;
-    height: 20px;
-    text-align: right;
-    background-color: rgba(0,0,0,0);
-    font-size: 12px;
-    font-weight: 600;
-    color: #5C6A70;
-    z-index: 30000;
-}
-
-#footer p{
-    margin-right: 1em;
 }
 
 @media screen and (max-width:700px){
