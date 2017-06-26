@@ -629,20 +629,6 @@ body{
   background-color: #fff;
 }
 
-
-.article .web_link{
-  display: block;
-  width: 10em;
-  height: 1.5em;
-  margin: 2.5em auto;
-  margin-bottom: 5em;
-  text-decoration: none;
-  color: #9b9c8e;
-  background-color: rgb(255, 255, 193);
-  text-align: center;
-
-}
-
 #footer{
     float:right;
     position: fixed;
@@ -666,35 +652,22 @@ body{
 
 .modal_container{
     position: relative;
+    top: 50vh;
     margin: 0 auto;
-    width: 80%;
-    padding-top: 10vh;
-    padding-left: 10%;
-    padding-right: 10%;
+    width: 100%;
     z-index: 1000;
     text-align: right;
-    background: rgba(230,230,230,0.75);
+    color: #414F20;
+    background: rgba(230,230,230,0.9);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 
-.article_max_view{
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1440px;
-}
-
-.modal_container .main_info{
-    text-align: left;
-    position: fixed;
-    width: 25%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .back_button{
+    display: block;
+    float:left;
+    margin-top: 50px;
+    margin-left: 50px;
     margin-bottom: 10px;
     width: 20px;
     height: 20px;
@@ -707,39 +680,36 @@ body{
     transition: ease-in-out 0.5s;
 }
 
-.back_button:hover{
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
+.article_max_view{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1440px;
 }
 
 .modal_container h1{
+    display: block;
+    position: relative;
     width: 100%;
+    margin: 30px auto;
+    padding-top: 25px;
+    text-align: center;
     font-weight: bold;
-    font-size: 19px;
-    margin-bottom: 15px;
-}
-
-.new_line::before{
-  content: "\A";
-  white-space: pre;
+    font-size: 25px;
+    letter-spacing: 5;
 }
 
 .information{
-    width: 85%;
-    max-width: 350px;
-    min-width: 300px;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
     text-align: left;
-}
-
-.information dl{
-    padding: 5%;
-    padding-bottom: calc(5% - 10px);
-    background-color: rgba(170,207,83,0.7);
+    border-left: solid 2px #aacf53;
 }
 
 .information dt{
     font-size: 15px;
-    font-weight: 100;
+    font-weight: normal;
 }
 
 .information dd{
@@ -747,24 +717,14 @@ body{
     margin: 2px 0 10px;
     font-size: 16px;
     font-weight: bold;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.information .skill{
-    font-size:12px;
-    font-weight: normal;
-    text-align: center;
 }
 
 .article{
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    width: 65%;
-    text-align: left;
+    width: 80%;
+    text-align: center;
 }
 
 .article img{
@@ -781,6 +741,19 @@ body{
     width: 100%;
     margin: 20px 0 20px;
     line-height: 2.5em;
+}
+
+.article .web_link{
+  display: block;
+  width: 10em;
+  height: 1.5em;
+  margin: 0 auto;
+  margin-top: 2.5em;
+  padding-bottom: 5em;
+  text-decoration: none;
+  color: #9b9c8e;
+  text-align: center;
+
 }
 
 @media screen and (max-width:700px){
