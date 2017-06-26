@@ -614,6 +614,7 @@ body{
 }
 
 #back_link{
+  position: absolute;
   width: 160px;
   height: 60px;
   padding: 20px;
