@@ -55,12 +55,12 @@ html{
 /*拡大表示*/
 @keyframes slideUp {
   0% {top: 100vh}
-  100% {top: 66vh}
+  100% {top: 75vh}
 }
 
 @-webkit-keyframes slideUp {
   0% {top: 100vh}
-  100% {top: 66vh}
+  100% {top: 75vh}
 }
 
 body{
@@ -686,7 +686,7 @@ body{
 
 .modal_container{
     position: absolute;
-    top: 66vh;
+    top: 75vh;
     margin: 0 auto;
     width: 100%;
     z-index: 10;
@@ -742,8 +742,10 @@ body{
   border-bottom: solid 1px #414f20;
 }
 
-.information{
-    display: block;
+.information dl{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
     margin: 0 auto;
     margin-bottom: 50px;
     width: 100%;
@@ -753,7 +755,6 @@ body{
 
 .info_genre{
   display: flex;
-  width: 100%;
   flex-wrap: nowrap;
 }
 
@@ -765,7 +766,7 @@ body{
 
 .information dd{
     -webkit-margin-start:0px;
-    margin: 0 0 3px 10px;
+    margin: 0 20px 3px 10px;
     font-size: 13px;
 }
 
