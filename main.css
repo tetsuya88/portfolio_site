@@ -650,25 +650,18 @@ body{
 
 /* 各作品のページのスタイル */
 
-.modal_container{
-    position: relative;
-    top: 50vh;
-    margin: 0 auto;
-    width: 100%;
-    z-index: 1000;
-    text-align: right;
-    color: #414F20;
-    background: rgba(230,230,230,0.9);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+.background_img{
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
 }
 
 .back_button{
     display: block;
-    float:left;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-bottom: 10px;
+    position: fixed;
+    top: 40px;
+    left: 40px;
     width: 20px;
     height: 20px;
     background: url("img/back_button.svg");
@@ -677,83 +670,124 @@ body{
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    transition: ease-in-out 0.5s;
+    z-index:100;
+}
+
+.modal_container{
+    position: absolute;
+    top: 66vh;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 10;
+    text-align: left;
+    color: #414F20;
+    background: rgba(239, 247, 219, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .article_max_view{
     display: block;
+    position: relative;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     max-width: 1440px;
+}
+
+.categorie{
+  display: block;
+  position: relative;
+  margin-bottom: 8px;
+  padding-top: 50px;
+  font-size: 14px;
 }
 
 .modal_container h1{
     display: block;
     position: relative;
     width: 100%;
-    margin: 30px auto;
-    padding-top: 25px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-    letter-spacing: 5;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.title_line{
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  z-index: 500;
+}
+
+.title_line span{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  border-bottom: solid 1px #414f20;
 }
 
 .information{
     display: block;
     margin: 0 auto;
-    width: 80%;
+    margin-bottom: 50px;
+    width: 100%;
     text-align: left;
-    border-left: solid 2px #aacf53;
+    font-weight: bold;
+}
+
+.info_genre{
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
 .information dt{
-    font-size: 15px;
-    font-weight: normal;
+    display: inline;
+    font-size: 13px;
+    margin: 0 0 5px 0;
 }
 
 .information dd{
     -webkit-margin-start:0px;
-    margin: 2px 0 10px;
-    font-size: 16px;
-    font-weight: bold;
+    margin: 0 0 5px 10px;
+    font-size: 13px;
 }
 
 .article{
     display: block;
     margin: 0 auto;
-    margin-top: 30px;
-    width: 80%;
-    text-align: center;
+    margin-top: 50px;
+    width: 100%;
 }
 
 .article img{
-    width: 100%;
-    margin-bottom: 1.5em;
+    width: 80%;
+    margin-bottom: 2.5em;
 }
 
 .article h1{
   font-size: 16px;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 .article p{
-    width: 100%;
-    margin: 20px 0 20px;
-    line-height: 2.5em;
+    width: 80%;
+    font-size: 14px;
+    margin-bottom: 2.5em;
+    line-height: 1.5em;
 }
 
-.article .web_link{
+.web_link{
   display: block;
   width: 10em;
   height: 1.5em;
-  margin: 0 auto;
-  margin-top: 2.5em;
-  padding-bottom: 5em;
   text-decoration: none;
-  color: #9b9c8e;
+  background: #AACF53;
   text-align: center;
-
+  text-decoration: none;
+  color: #414F20;
 }
 
 @media screen and (max-width:700px){
