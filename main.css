@@ -760,12 +760,12 @@ body{
 .information dt{
     display: inline;
     font-size: 13px;
-    margin: 0 0 5px 0;
+    margin: 0 0 3px 0;
 }
 
 .information dd{
     -webkit-margin-start:0px;
-    margin: 0 0 5px 10px;
+    margin: 0 0 3px 10px;
     font-size: 13px;
 }
 
