@@ -198,6 +198,14 @@ body{
   height: auto;
 }
 
+.sec_title{
+  display: block;
+  position: relative;
+  top: 10px;
+  font-size: 15px; 
+}
+
+
 /* ファストビューのスタイル */
 
 .firstview{
@@ -214,7 +222,7 @@ body{
     top: 40vh;
     opacity: 1;
     color: #414F20;
-    z-index: 1000;
+    z-index: 1000000;
     transition-duration: 1s;
     animation: fadeIn 2.5s ease 0.5s 1 backwards;
     -webkit-animation: fadeIn 2.5s ease 0.5s 1 backwards;
@@ -428,7 +436,6 @@ body{
     z-index: 1000;
     background-color: #C4D797;
     height: 100vh;
-    max-height: 1080px;
     min-height: 750px;
     width: 100%;
     display: flex;
@@ -837,6 +844,11 @@ body{
     font-size: 17px;
     letter-spacing: 8px;
   }
+    
+  .lines span:nth-child(2){
+    height: 120%;
+    left: 80vw;
+  }
 
   .job{
     font-size: 10px;
@@ -852,11 +864,17 @@ body{
 
   .about{
     position: relative;
+      display: block;
     float: none;
     top: 0;
     height: auto;
     background-color: #AACF53;
     margin-top: -6px;
+  }
+    
+  .about_box{
+    display: block;
+    margin: 0 auto;    
   }
 
   .about_box h1{
@@ -926,6 +944,41 @@ body{
   .works{
     height: auto;
   }
+    
+  .genre_link{
+    height: auto;
+    margin: 50px auto;
+  }
+    
+  .works_genre{
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  text-align: center;
+  padding: 0;
+  animation: fadeIn 1s ease 0s 1 forwards;
+  -webkit-animation: fadeIn 1s ease 0s 1 forwards;
+  }
+    
+  .genre{
+    display: inline-block;
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 15px;
+    transition-property:transform;
+    transition-timing-function:ease-in-out;
+    transition-duration:0.3s;
+}
+#back_link{
+  width: 130px;
+  height: 130px;
+  padding: 0;
+  padding-top: 55px;
+  text-align: center;
+}
+
 
 }
 
