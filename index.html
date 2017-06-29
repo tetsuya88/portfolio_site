@@ -37,10 +37,31 @@
         ga('send', 'pageview');
 
         $(function(){
-            $('body').fadeMover();
-            $('#navToggle').click(function(){
-                $('header').toggleClass('openNav');
-            });
+          $('.head_content').click(function() {
+            var y = $("#main").scrollTop();
+            var target = $(this).attr("href");
+            // 移動先を取得
+            var position = $(target).offset().top;
+            var pos = y + position;
+            // スムーススクロール
+            $('#main').animate({scrollTop:pos}, 1000);
+            return false;
+          });
+
+          $('#main').scroll(function(){
+            var scrollValue = $('#main').scrollTop() / 10;
+
+            var lineWidth = document.getElementsByClassName('lines')[0];
+            var lineHeight = document.getElementsByClassName('lines')[0];
+
+            lineWidth.style.width = 100 - scrollValue + "%";
+            lineHeight.style.height = 100 - scrollValue + "%";
+
+          });
+          $('body').fadeMover();
+          $('#navToggle').click(function(){
+              $('header').toggleClass('openNav');
+          });
         });
 
         var post_works_id = "works_first";
@@ -66,9 +87,9 @@
        </div>
      </div>
      <nav>
-         <a href="#firstview">Top</a>
-         <a href="#about">About</a>
-         <a href="#works">Works</a>
+         <a class="head_content" href="#firstview">Top</a>
+         <a class="head_content" href="#about">About</a>
+         <a class="head_content" href="#works">Works</a>
      </nav>
    </header>
 
@@ -311,10 +332,10 @@
             </ul>
           </nav>
         </section>
+        <footer id="footer">
+            <p>©2017 Yamaura Tetsuya All Right Reserved</p>
+        </footer>
       </div>
    </main>
-   <footer id="footer">
-       <p>©2017 Yamaura Tetsuya All Right Reserved</p>
-   </footer>
 </body>
 </html>
