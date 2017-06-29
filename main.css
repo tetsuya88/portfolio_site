@@ -1023,4 +1023,35 @@ body{
     padding-top: 55px;
     text-align: center;
   }
+
+  .background_img{
+    position: relative;
+  }
+
+  .back_button{
+      top: 20px;
+      left: 20px;
+  }
+
+  .modal_container{
+      position: relative;
+      top: 0;
+      left: 0;
+
+      animation: none;
+      -webkit-animation: none;
+  }
+
+  .information{
+    flex-wrap: wrap;
+  }
+
+  .info_genre{
+    width: 100%;
+  }
+
+  .article{
+    width: 100%;
+    text-align: left;
+  }
 }
