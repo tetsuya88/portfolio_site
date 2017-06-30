@@ -167,7 +167,7 @@ body{
   transition-duration:0.3s;
 }
 
-.header_bar a:hover{
+.hover .header_bar a:hover{
   transform: scale(1.3);
   color: #414F20;
 }
@@ -484,7 +484,7 @@ body{
     transition-duration:0.3s;
 }
 
-.genre:hover{
+.hover .genre:hover{
   transform: scale(1.1);
 }
 
@@ -604,33 +604,33 @@ body{
 }
 
 .article_link img,
-.article_link:hover div::before,
-.article_link:hover div::after,
+.hover .article_link:hover div::before,
+.hover .article_link:hover div::after,
 .article_link p{
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-.article_link:hover img {
+.hover .article_link:hover img {
 	opacity: 0.5;
 }
 
-.article_link:hover div::before,
-.article_link:hover div::after{
+.hover .article_link:hover div::before,
+.hover .article_link:hover div::after{
   opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
 
-.article_link:hover p {
+.hover .article_link:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-.article_link:hover div::after,
-.article_link:hover p,
-.article_link:hover img {
+.hover .article_link:hover div::after,
+.hover .article_link:hover p,
+.hover .article_link:hover img {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
@@ -844,6 +844,7 @@ body{
 
   .sec_title{
     width: auto;
+    padding-top: 40px;
     font-size: 15px;
   }
 
@@ -953,6 +954,7 @@ body{
 
   .works{
     height: auto;
+    align-content: flex-start;
   }
 
   .genre_link{

@@ -29,7 +29,16 @@
         //
         // ga('create', 'UA-89547114-1', 'auto');
         // ga('send', 'pageview');
-
+        var hover = function() {
+          $(window).on('load resize orientationchange', function() {
+            if($(window).width() <= 480) {
+              $('body').removeClass('hover');
+            } else {
+              $('body').addClass('hover');
+            }
+          });
+        }
+        
         $(function(){
           $('.head_content').click(function() {
             var y = $("#main").scrollTop();
@@ -56,6 +65,7 @@
           $('#navToggle').click(function(){
               $('header').toggleClass('openNav');
           });
+          hover();
         });
 
         var post_works_id = "works_first";
