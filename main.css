@@ -816,6 +816,10 @@ body{
     line-height: 1.5em;
 }
 
+.article a{
+  margin-top: 20px;
+}
+
 .article iframe{
   display: block;
   margin: 30px auto;
@@ -838,16 +842,24 @@ body{
 @media screen and (max-width:768px){
 
   #navToggle{
-    left: 10px;
+    left: 15px;
   }
 
   .header_bar{
-    top: 10px;
+    top: 15px;
+  }
+
+  .header_bar nav{
+
+  }
+
+  .openNav nav{
+
   }
 
   .header_bar a{
     margin: 0 15px 0 15px;
-    font-size: 12px;
+    font-size: 16px;
     color: #414F20;
   }
 
@@ -911,7 +923,7 @@ body{
   }
 
   .portrait{
-    width: 70px;
+    width: 100px;
     height: auto;
   }
 
