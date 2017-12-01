@@ -83,6 +83,7 @@ body{
   opacity: 0;
   animation: fadeIn 2.5s ease 0.5s 1 forwards;
   -webkit-animation: fadeIn 2.5s ease 0.5s 1 forwards;
+  z-index: 1000000;
 }
 
 #navToggle div{
@@ -127,7 +128,7 @@ body{
 .header_bar{
   float: left;
   position: fixed;
-  top:20px;
+  padding-top:20px;
   width: 500px;
   text-align: left;
   background: rgba(255, 255, 255, 0);
@@ -841,25 +842,45 @@ body{
 
 @media screen and (max-width:768px){
 
-  #navToggle{
-    left: 15px;
+  .header_bar{
+    padding-top: 15px;
+    width: 100vw;
+    text-align: right;
   }
 
-  .header_bar{
-    top: 15px;
+  #navToggle{
+    left: auto;
+    right: 15px;
   }
 
   .header_bar nav{
-
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    margin: 0;
+    padding-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow: hidden;
+    width: 50vw;
+    height: 100vh;
+    color: #222;
+    background-color: rgba(255,255,255,0.8);
   }
 
   .openNav nav{
-
+    -webkit-transform: translateX(-50vw);
+    transform: translateX(-50vw);
   }
 
   .header_bar a{
-    margin: 0 15px 0 15px;
-    font-size: 16px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0 15px 0;
+    font-size: 20px;
     color: #414F20;
   }
 
