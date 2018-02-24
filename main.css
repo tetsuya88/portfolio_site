@@ -414,6 +414,10 @@ body{
   padding-bottom: 30px;
 }
 
+.hobby h2{
+  font-weight: bold;
+}
+
 .interests{
   width: 100%;
   display: flex;
@@ -613,7 +617,7 @@ body{
 }
 
 .hover .article_link:hover img {
-	opacity: 0.5;
+	opacity: 0.3;
 }
 
 .hover .article_link:hover div::before,
@@ -638,11 +642,12 @@ body{
 
 #back_link{
   position: absolute;
-  width: 160px;
+  width: 200px;
   height: 60px;
-  padding: 20px;
-  padding-top: 120px;
-  text-align: left;
+  display: flex;
+  padding: 70px 0px 70px 0px;
+  justify-content: center;
+  align-items: center;
   text-indent: 0;
   text-decoration: none;
   white-space: normal;
@@ -663,7 +668,7 @@ body{
     background-color: #c4d797;
     font-size: 12px;
     font-weight: 600;
-    color: #5C6A70;
+    color: #414F20;
     z-index: 30000;
 }
 
@@ -793,8 +798,8 @@ body{
     display: block;
     margin: 0 auto;
     margin-top: 50px;
-    width: 80%;
-    text-align: center;
+    width: 100%;
+    text-align: left;
 }
 
 .article img{
@@ -1065,7 +1070,6 @@ body{
     width: 130px;
     height: 130px;
     padding: 0;
-    padding-top: 55px;
     text-align: center;
   }
 
